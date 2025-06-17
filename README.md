@@ -1,4 +1,3 @@
-# 1. gpt-workflow: High-Leverage GPT Prompt Snippets
 <<<<<<< Updated upstream
 # gpt-intelli-prompt-pro
 
