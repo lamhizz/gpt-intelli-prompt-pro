@@ -1,6 +1,6 @@
-# Save as: ~/Library/Application Support/espanso/match/gpt-workflow.yml (macOS)
+# Save as: ~/Library/Application Support/espanso/match/gpt-intelli-prompt-pro.yml (macOS)
 
-name: gpt-workflow
+name: gpt-intelli-prompt-pro
 parent: default
 matches:
   # Group Name: Refinement & Iteration Prompts

@@ -1,12 +1,16 @@
 # 1. gpt-workflow: High-Leverage GPT Prompt Snippets
+<<<<<<< Updated upstream
+# gpt-intelli-prompt-pro
 
 **Instantly steer, refine, audit, and extend GPT's behavior with a simple `:trigger`.**
+**Master your AI conversations with a professional library of high-leverage GPT prompt snippets.**
 
 ---
 
 ## 2. Table of Contents
 
 1.  [1. gpt-workflow: High-Leverage GPT Prompt Snippets](#1-gpt-workflow-high-leverage-gpt-prompt-snippets)
+1.  [1. gpt-intelli-prompt-pro: High-Leverage GPT Prompt Snippets](#1-gpt-intelli-prompt-pro-high-leverage-gpt-prompt-snippets)
 2.  [2. Quick Start: Core Starter Pack](#2-quick-start-core-starter-pack)
 3.  [3. Features & Organization](#3-features--organization)
     * [3.1. Groups List](#31-groups-list)
@@ -68,6 +72,8 @@ Jump right into enhancing your GPT interactions with these essential triggers. J
 
 The `gpt-workflow` toolkit transforms your GPT interactions into a high-leverage workflow by codifying best-practice prompts into simple, memorable triggers. Snippets are organized by their primary intent into distinct logical units, designed to be easily discoverable and reusable.
 All these snippets are housed within a single YAML file: `match/gpt-workflow.yml`. This consolidated structure makes it easy to manage and integrate into your Espanso setup.
+The `gpt-intelli-prompt-pro` toolkit transforms your GPT interactions into a high-leverage workflow by codifying best-practice prompts into simple, memorable triggers. Snippets are organized by their primary intent into distinct logical units, designed to be easily discoverable and reusable.
+All these snippets are housed within a single YAML file: `match/gpt-intelli-prompt-pro.yml`. This consolidated structure makes it easy to manage and integrate into your Espanso setup.
 
 ### 3.1. Groups List
 
@@ -87,6 +93,7 @@ The toolkit is structured into the following major logical units, each serving a
 ## 4. Cheat Sheet
 
 Here's a comprehensive overview of all `gpt-workflow` triggers and their details, organized by their logical units:
+Here's a comprehensive overview of all `gpt-intelli-prompt-pro` triggers and their details, organized by their logical units:
 
 ---
 
@@ -274,11 +281,13 @@ These snippets apply specific analytical or design frameworks (like Double Diamo
 ## 5. Installation
 
 To get started with `gpt-workflow`, simply follow these steps:
+To get started with `gpt-intelli-prompt-pro`, simply follow these steps:
 1.  **Locate your Espanso `match` directory:**
     * **macOS:** `~/Library/Application Support/espanso/match/`
     * **Linux:** `~/.config/espanso/match/`
     * **Windows:** `%APPDATA%\espanso\match\`
 2.  **Save the file:** Copy the entire YAML content from `gpt-workflow.yml` into a new file named `gpt-workflow.yml` inside your `match` directory.
+2.  **Save the file:** Copy the entire YAML content from `gpt-intelli-prompt-pro.yml` into a new file named `gpt-intelli-prompt-pro.yml` inside your `match` directory.
 3.  **Restart Espanso:** Run `espanso restart` in your terminal to load the new snippets.
 
 ---
@@ -286,6 +295,8 @@ To get started with `gpt-workflow`, simply follow these steps:
 ## 6. Contributing & Extending
 
 We welcome contributions to expand and improve the `gpt-workflow` toolkit!
+We welcome contributions to expand and improve the `gpt-intelli-prompt-pro` toolkit!
+If you feel like there's any important tag/snippet missing, feel free to create a Pull Request or open an [Issue](https://github.com/lamhizz/gpt-intelli-prompt-pro/issues/new).
 
 * **Adding New Snippets**:
     * Ensure your new snippet fits into one of the existing logical units. If it introduces a new major theme, consider proposing a new group.
@@ -307,6 +318,7 @@ We welcome contributions to expand and improve the `gpt-workflow` toolkit!
 ## 7. Usage Examples
 
 Here are a few ways you can combine `gpt-workflow` snippets to create powerful GPT interactions:
+Here are a few ways you can combine `gpt-intelli-prompt-pro` snippets to create powerful GPT interactions:
 
 * **Code Review & Refinement Flow:**
     1.  Start by pasting your code.
@@ -327,3 +339,4 @@ Here are a few ways you can combine `gpt-workflow` snippets to create powerful G
 This project is licensed under the MIT License. See the [LICENSE](LICENSE-file-link) file for details.
 
 For any issues, bug reports, or requests for new triggers, please file an issue on the [GitHub repository](https://github.com/your-username/gpt-workflow/issues).
+For any issues, bug reports, or requests for new triggers, please file an issue on the GitHub repository.
