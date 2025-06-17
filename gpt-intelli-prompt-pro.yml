@@ -1,0 +1,1378 @@
+# Save as: ~/Library/Application Support/espanso/match/gpt-workflow.yml (macOS)
+
+name: gpt-workflow
+parent: default
+matches:
+  # Group Name: Refinement & Iteration Prompts
+  # Group Purpose: These snippets are designed to refine, enhance, and iterate on previous GPT responses, ensuring accuracy, clarity, and relevance. They focus on improving the quality and focus of ongoing conversations.
+  # ---
+  # Name: ID001 - Refine Previous Response
+  # Tags: Refinement, Feedback, Iteration
+  # Use cases: Improving output, making responses better, clarifying previous answers
+  # Description: Updates the AI's previous response by incorporating new context and conversation history to enhance accuracy, relevance, and actionability.
+  - trigger: ":grefine"
+    replace: "Update your previous response based on the added context and conversation history—make it more accurate, relevant, and actionable."
+
+  # ---
+  # Name: ID002 - Enhance Output for Fit
+  # Tags: Refinement, Adaptation, Clarity
+  # Use cases: Tailoring output, aligning with goals, improving fit
+  # Description: Reworks the AI's last output to better fit my latest input and earlier goals. Keep what’s useful, upgrade what needs clarity."
+  - trigger: ":genhance"
+    replace: "Rework your last output to better fit my latest input and earlier goals. Keep what’s useful, upgrade what needs clarity."
+
+  # ---
+  # Name: ID055 - Improvement Loop
+  # Tags: Iteration, Improvement, Quality Control
+  # Use cases: Refining output, continuous improvement, self-correction
+  # Description: Improves output by running a loop: identifying weaknesses, attempting improvements, and re-evaluating, for polished results.
+  - trigger: ":gloop"
+    replace: |
+      Improve this output by running a loop of:
+      - What could be better?
+      - Try to improve it
+      - Then ask: what’s still weak?
+      Loop once or twice to polish.
+
+  # ---
+  # Name: ID097 - Review Own Output
+  # Tags: Review, Self-Correction, Quality Control
+  # Use cases: Improving response quality, critical self-assessment, ensuring coherence
+  # Description: Instructs the AI to review its own output for clarity and coherence before the user evaluates it.
+  - trigger: ":greview"
+    replace: "Now review your own output for clarity and coherence before I evaluate it."
+
+  # ---
+  # Name: ID098 - Polish to Final-Ready Copy
+  # Tags: Polish, Finalization, Professionalism
+  # Use cases: Preparing content for publication, formal communication, high-quality output
+  # Description: Polishes content into final-ready copy, making it tight, professional, and purposeful.
+  - trigger: ":gpolish"
+    replace: "Polish this into final-ready copy—tight, professional, and purposeful."
+
+  # ---
+  # Name: ID132 - Automatic Output Upgrade
+  # Tags: Self-Correction, Quality Control, Improvement
+  # Use cases: Before final output, continuous improvement, enhancing clarity and actionability
+  # Description: Automatically reviews and improves its own output before finalizing, spotting vague sections, upgrading structure, eliminating redundancy, and ensuring actionability.
+  - trigger: ":gupgrade"
+    replace: |
+      Before finalizing your answer, automatically review and improve your own output:
+      - Spot any vague or generic sections and rewrite them with clarity and specificity
+      - Upgrade structure, formatting, or flow for readability
+      - Eliminate redundancy or unnecessary filler
+      - Ensure your suggestions are actionable and tied to my intent
+      - If appropriate, briefly add a "Why this matters" note after key points
+
+      Then give me the improved version.
+
+  # Group Name: Critical Thinking & Problem Framing
+  # Group Purpose: These snippets encourage GPT to think more deeply, identify potential issues, explore alternative perspectives, and structure complex problems using established mental models and frameworks.
+  # ---
+  # Name: ID003 - Check for Overlooks and Biases
+  # Tags: Feedback, Critical Thinking, Blind Spots
+  # Use cases: Identifying omissions, checking for bias, comprehensive review
+  # Description: Prompts the AI to review the conversation for anything overlooked, biased, missing, or to identify blind spots, weak signals, or outlier cases.
+  - trigger: ":gblind"
+    replace: "Can you review what we've discussed so far and check if anything seems overlooked, biased, missing, or if there are any blind spots, weak signals, or outlier cases we should consider?"
+
+  # ---
+  # Name: ID005 - Step-by-Step Thinking
+  # Tags: Thinking, Logic, Reasoning
+  # Use cases: Structured problem-solving, detailed explanations, avoiding assumptions
+  # Description: Instructs the AI to think step-by-step, prioritizing clarity, avoiding assumptions, and explaining its reasoning in detail.
+  - trigger: ":gthink"
+    replace: "Think step-by-step. Prioritize clarity, avoid assumptions, and explain your reasoning."
+
+  # ---
+  # Name: ID006 - Reframe Problem Perspective
+  # Tags: Framing, Perspective, Strategy
+  # Use cases: Alternative views, creative problem-solving, strategic thinking
+  # Description: Asks the AI to reframe the problem from a different perspective, such as that of a strategist, designer, researcher, or skeptic.
+  - trigger: ":gframe"
+    replace: "Reframe the problem using a different perspective—like a strategist, designer, researcher, or skeptic."
+
+  # ---
+  # Name: ID007 - Explain Reasoning or Assumption
+  # Tags: Clarity, Reasoning, Justification
+  # Use cases: Understanding rationale, uncovering hidden assumptions, logical transparency
+  # Description: Requests the AI to explicitly state the reasoning or assumptions behind its suggestions.
+  - trigger: ":gwhy"
+    replace: "What’s the reasoning or assumption behind your suggestion? Can you make it explicit?"
+
+  # ---
+  # Name: ID012 - Identify Assumptions and Blind Spots
+  # Tags: Critical Thinking, Assumptions, Risks
+  # Use cases: Risk assessment, comprehensive analysis, identifying overlooked factors
+  # Description: Asks the AI to identify potential assumptions, blind spots, overlooked factors, or second-order effects in a situation.
+  - trigger: ":gspot"
+    replace: "What assumptions might I be making here? Are there any blind spots, overlooked factors, or second-order effects I should consider?"
+
+  # ---
+  # Name: ID013 - Alternative Perspectives
+  # Tags: Perspectives, Brainstorming, Problem-Solving
+  # Use cases: Generating new ideas, understanding different viewpoints, creative solutions
+  # Description: Provides 3 alternative perspectives or interpretations of a situation, each from a different role or mindset (e.g., critic, innovator, end-user).
+  - trigger: ":gperspectives"
+    replace: "Give me 3 alternative perspectives or interpretations of this situation—each from a different role or mindset (e.g. critic, innovator, end-user)."
+
+  # ---
+  # Name: ID045 - Identify Biases (Markup)
+  # Tags: Bias, Markup, Critical Thinking
+  # Use cases: Uncovering prejudice, balanced analysis, improving objectivity
+  # Description: A concise markup prompt to identify any biases, assumption traps, or one-sided views.
+  - trigger: ":gbias"
+    replace: "!bias — Identify any biases, assumption traps, or one-sided views."
+
+  # ---
+  # Name: ID046 - Reframe from Another Point of View (Markup)
+  # Tags: Perspective, Markup, Reframing
+  # Use cases: Creative problem-solving, empathy building, diverse thinking
+  # Description: A concise markup prompt to reframe a topic from another point of view (e.g., child, expert, outsider).
+  - trigger: ":glens"
+    replace: "Reframe this from 3 different perspectives: - An optimist - A skeptic - A user from another culture/role/domain Highlight how perception or decision-making changes in each."
+
+  # ---
+  # Name: ID056 - Socratic Method
+  # Tags: Questioning, Socratic Method, Deep Inquiry
+  # Use cases: Guiding exploration, uncovering true needs, avoiding assumptions
+  # Description: Uses the Socratic method, asking thoughtful, layered questions before attempting to solve or explain, guiding with questions.
+  - trigger: ":gsocratic"
+    replace: |
+      Use the Socratic method: ask thoughtful, layered questions before trying to solve or explain. Don't assume my needs—guide me with questions.
+
+  # ---
+  # Name: ID058 - Red Team/Devil's Advocate
+  # Tags: Red Team, Critical Analysis, Risk Assessment
+  # Use cases: Identifying flaws, stress-testing plans, counter-argument generation
+  # Description: Acts as a red team or devil’s advocate, identifying flaws, risks, and counterarguments to a plan, idea, or assumption.
+  - trigger: ":gredteam"
+    replace: |
+      Act as a red team or devil’s advocate. Identify flaws, risks, and counterarguments to this plan, idea, or assumption. Be critical but fair.
+
+  # ---
+  # Name: ID064 - Dig Deeper Insight
+  # Tags: Deep Dive, Insight, Critical Thinking
+  # Use cases: Uncovering core principles, cutting through noise, identifying high-leverage directions
+  # Description: Goes beyond the surface to find deeper insights or principles, cutting through noise and pointing to essential or high-leverage directions.
+  - trigger: ":gdigdeep"
+    replace: |
+      Go beyond the surface. Don’t just elaborate—excavate.
+
+      1. Find the deeper insight or principle behind this topic.
+      2. Cut through noise or distractions in what’s been said.
+      3. Point to the most essential or highest-leverage direction to pursue next.
+      4. Avoid padding—make every word do work. Think densely and act decisively.
+
+  # ---
+  # Name: ID065 - Core Insight & Next Steps
+  # Tags: Insight, Next Steps, Conciseness
+  # Use cases: Quick decision-making, identifying priorities, focused action
+  # Description: Focuses on the real insight and the immediate next steps, encouraging dense thinking.
+  - trigger: ":gcore"
+    replace: "Think densely. What’s the real insight here—and where should we go next?"
+
+  # ---
+  # Name: ID066 - Excavate Deeper Levels
+  # Tags: Deep Dive, Exploration, Fundamental Principles
+  # Use cases: Root cause analysis, philosophical inquiry, uncovering hidden truths
+  # Description: Digs one level deeper into an idea repeatedly until a core principle, paradox, or contradiction is reached.
+  - trigger: ":gecavate"
+    replace: |
+      Dig one level deeper into this idea. What’s underneath it that hasn’t been explored yet? Repeat until you reach a core principle, paradox, or contradiction.
+
+  # ---
+  # Name: ID071 - Recursive Questioning Framework
+  # Tags: Questioning, Depth, Iteration
+  # Use cases: Uncovering subtle truths, mapping nuance, iterative exploration
+  # Description: Generates deeper or more specific follow-up questions after each answer, recursively, until a foundational insight or knowledge gap is reached.
+  - trigger: ":grecursive"
+    replace: |
+      Use the Recursive Questioning Framework.
+
+      Instructions:
+      1. After each answer, generate a deeper or more specific follow-up question that builds on it.
+      2. Repeat this recursively to unfold layered insights.
+      3. Continue until you reach a foundational insight, paradox, turning point, or knowledge gap.
+
+      This framework is meant to help uncover subtle truths, map nuance, and explore depth iteratively.
+
+  # ---
+  # Name: ID072 - Keep Going Deeper
+  # Tags: Depth, Questioning, Exploration
+  # Use cases: Root cause analysis, detailed inquiry, uncovering hidden issues
+  # Description: Continues to ask follow-up questions after each answer, digging until something fundamental or unexpected is revealed.
+  - trigger: ":gdeepq"
+    replace: "Keep going deeper. Ask a follow-up question after each answer. Dig until you hit something fundamental or unexpected."
+
+  # ---
+  # Name: ID078 - 5 Whys Technique
+  # Tags: 5 Whys, Root Cause Analysis, Problem-Solving
+  # Use cases: Identifying underlying issues, continuous improvement, debugging problems
+  # Description: Uses the “5 Whys” technique to reach a root insight or fundamental assumption by repeatedly asking "Why?" at least 5 levels deep.
+  - trigger: ":g5whys"
+    replace: |
+      Use the “5 Whys” technique on this statement or problem.
+      Keep asking “Why?” after each answer until you reach a root insight or fundamental assumption.
+
+  # ---
+  # Name: ID079 - Reverse the Goal/Assumption
+  # Tags: Creativity, Reverse Thinking, Problem-Solving
+  # Use cases: Unconventional ideation, overcoming stagnation, extracting inverse insights
+  # Description: Flips the goal or assumption (e.g., "how to fail at X") to extract insights from the reversal that strengthen the original direction.
+  - trigger: ":greverse"
+    replace: |
+      Flip the goal or assumption.
+      Instead of “how to succeed at X,” try “how to fail at X” or “how to make it worse.”
+      Then extract insights from the reversal to strengthen your direction.
+
+  # ---
+  # Name: ID080 - Reframe from 3 Perspectives
+  # Tags: Perspectives, Reframing, Critical Thinking
+  # Use cases: Exploring diverse viewpoints, understanding implications, creative analysis
+  # Description: Reframes a topic from three different perspectives (e.g., optimist, skeptic, user from another culture/role/domain), highlighting perception shifts.
+  - trigger: ":gperspect"
+    replace: |
+      Reframe this from 3 different perspectives:
+      - An optimist
+      - A skeptic
+      - A user from another culture/role/domain
+
+      Highlight how perception or decision-making changes in each.
+
+  # ---
+  # Name: ID100 - Explore Core Paradox
+  # Tags: Paradox, Critical Thinking, Systems Thinking
+  # Use cases: Ethics, innovation, philosophy, positioning, uncovering deep tensions
+  # Description: Explores the core paradox in a topic, identifying two simultaneously true but tense things, and revealing what cannot be resolved and why.
+  - trigger: ":gparadox"
+    replace: |
+      Explore the core paradox in this topic. What two things are simultaneously true but in tension?
+      What does that reveal? What can’t be resolved—and why?
+      ✅ Useful for: ethics, innovation, systems thinking, philosophy, positioning
+
+  # ---
+  # Name: ID104 - Question Flawed Premise
+  # Tags: Critical Thinking, Assumptions, Blind Spot Detection
+  # Use cases: Escaping echo chambers, deep critical thinking, blind spot detection, re-evaluating core problems
+  # Description: Questions if the current question is flawed or based on a false premise, and suggests deeper questions to ask instead.
+  - trigger: ":gabyss"
+    replace: |
+      What if the question I’m asking is flawed or based on a false premise?
+      What deeper question should I be asking instead?
+      ✅ Useful for: escaping echo chambers, deep critical thinking, blind spot detection
+
+  # ---
+  # Name: ID108 - Random Lens Reframe (Dice)
+  # Tags: Creativity, Perspective, Problem-Solving
+  # Use cases: Breaking ruts, unblocking, shifting strategy view, generating diverse solutions
+  # Description: Picks a random lens (e.g., investor, child, poet) and reframes the topic using that perspective.
+  - trigger: ":gdice"
+    replace: |
+      Pick a random lens (e.g. investor, child, poet, rebel, ant colony).
+      Reframe this topic using that lens.
+      ✅ Useful for: breaking ruts, unblocking, shifting strategy view
+
+  # ---
+  # Name: ID131 - First Principles Thinking
+  # Tags: First Principles, Problem-Solving, Innovation
+  # Use cases: Fundamental analysis, unconventional problem-solving, building from scratch
+  # Description: Breaks down a challenge using First Principles thinking, identifying assumptions, atomic facts, and building solutions from those truths to find simpler paths.
+  - trigger: ":g1principle"
+    replace: |
+      Break this challenge down using **First Principles thinking**:
+      1. What are we assuming that might not be true?
+      2. What are the atomic facts (unarguable truths)?
+      3. How could we build up a solution from scratch based on just those truths?
+      Apply this to find simpler, unconventional, or more effective paths.
+
+  # Group Name: Summarization & Clarity Prompts
+  # Group Purpose: These snippets focus on distilling information into clear, concise, and understandable formats, adapting the output for different levels of detail and audience comprehension.
+  # ---
+  # Name: ID008 - Simplify and Clarify
+  # Tags: Clarity, Summarization, Simplification
+  # Use cases: Making complex topics understandable, general communication, educational content
+  # Description: Instructs the AI to rewrite its response to be simpler, more direct, and easier to understand without losing important nuances.
+  - trigger: ":gclarify"
+    replace: "Rewrite your response to be simpler, more direct, and easier to understand—without losing nuance."
+
+  # ---
+  # Name: ID009 - Concise Key Point Summary
+  # Tags: Summarization, Conciseness, Key Points
+  # Use cases: Quick overviews, recaps, executive summaries
+  # Description: Provides a concise summary of the key points, removing fluff but preserving depth.
+  - trigger: ":gsummary"
+    replace: "Give me a concise summary of the key points, stripped of fluff but preserving depth."
+
+  # ---
+  # Name: ID010 - TLDR Summary
+  # Tags: Summarization, Brevity, TLDR
+  # Use cases: Very quick summaries, highlighting main takeaways, fast information consumption
+  # Description: Summarizes the content in a single paragraph, prioritizing relevance to the user's goal.
+  - trigger: ":gtldr"
+    replace: "Summarize in a single paragraph. Prioritize relevance to my goal."
+
+  # ---
+  # Name: ID011 - Explain in Simpler Terms
+  # Tags: Simplification, Explanation, Accessibility
+  # Use cases: Explaining complex topics to beginners, general audiences, quick learning
+  # Description: Explains a topic in simpler terms without losing accuracy, assuming intelligence but unfamiliarity with this specific topic.
+  - trigger: ":gsimplify"
+    replace: "Please explain this in simpler terms without losing accuracy. Assume I’m intelligent but unfamiliar with this specific topic."
+
+  # ---
+  # Name: ID034 - TLDR Summary (Markup)
+  # Tags: Summarization, Markup, Conciseness
+  # Use cases: Quick overviews, recapping long conversations, fast information retrieval
+  # Description: A concise markup prompt to summarize everything so far in a clear, concise format.
+  - trigger: ":gtldrm"
+    replace: "#tldr — Summarize everything so far in a clear, concise format."
+
+  # ---
+  # Name: ID053 - Rewrite at Three Clarity Levels
+  # Tags: Clarity, Rewriting, Audience Adaptation
+  # Use cases: Tailoring content for different audiences, educational materials, multi-level communication
+  # Description: Rewrites content at three clarity levels: simplified for a beginner, professional/neutral, and technical/expert-level.
+  - trigger: ":gclarity"
+    replace: |
+      Rewrite this at three levels of clarity:
+      1. Simplified for a beginner
+      2. Professional/neutral tone for internal use
+      3. Technical, expert-level with precise vocabulary
+
+  # ---
+  # Name: ID060 - Explanation Abstraction Ladder
+  # Tags: Abstraction, Explanation, Layered Understanding
+  # Use cases: Explaining complex topics, educational content, structured communication
+  # Description: Explains content at three abstraction levels: high-level concept, mid-level application, and ground-level example.
+  - trigger: ":gladder"
+    replace: |
+      Explain this at 3 abstraction levels:
+      - High-level concept
+      - Mid-level application
+      - Ground-level example
+
+  # ---
+  # Name: ID070 - Chain of Density Prompting
+  # Tags: Conciseness, Density, Information Richness
+  # Use cases: Maximizing impact per word, efficient communication, cutting filler
+  # Description: Produces a concise, information-rich response by prioritizing brevity, removing redundancy, and packing value into each sentence.
+  - trigger: ":gdensity"
+    replace: |
+      Use Chain of Density Prompting: produce a concise, information-rich response.
+
+      Guidelines:
+      - Prioritize brevity without losing meaning
+      - Remove weak or redundant phrases
+      - Pack each sentence with as much value and insight as possible
+      - Aim for maximum impact with minimal words
+
+  # ---
+  # Name: ID076 - Structured Layers Response
+  # Tags: Structure, Summarization, Readability
+  # Use cases: Progressive disclosure, quick consumption, detailed understanding
+  # Description: Structures the response in three layers: high-level summary, key points, and detailed breakdown, for progressive richness and skim-ability.
+  - trigger: ":glayers"
+    replace: |
+      Structure your response in 3 layers:
+      1. High-level summary (1–2 lines)
+      2. Key points (bulleted or sectioned)
+      3. Detailed breakdown (optional)
+
+      Make it progressively richer but easy to skim at each level.
+
+  # ---
+  # Name: ID096 - Compact Essential Points
+  # Tags: Conciseness, Brevity, Efficiency
+  # Use cases: Quick answers, avoiding fluff, direct communication
+  # Description: Responds with only essential points—no intros, no summaries, no filler.
+  - trigger: ":gcompact"
+    replace: "Respond with only essential points—no intros, no summaries, no filler."
+
+  # ---
+  # Name: ID106 - Explain with Constraints (Haiku)
+  # Tags: Brevity, Clarity, Communication
+  # Use cases: Training brevity, edge-case communication, testing clarity, creative writing exercises
+  # Description: Explains a topic using exactly 17 words, then only analogies, then again using only emojis and logic, to train brevity and clarity.
+  - trigger: ":ghaiku"
+    replace: |
+      Explain this using exactly 17 words. Then again using only analogies.
+      Then again using only emojis and logic.
+      ✅ Useful for: training brevity, edge-case communication, testing clarity
+
+  # Group Name: Planning & Organization Prompts
+  # Group Purpose: These snippets help structure ideas, break down complex tasks, prioritize efforts, and plan out workflows, ensuring clarity and efficiency in project execution.
+  # ---
+  # Name: ID014 - Break Down into Steps
+  # Tags: Process, Step-by-Step, Planning
+  # Use cases: Project planning, task breakdown, logical sequencing
+  # Description: Breaks down a topic into a logical sequence of steps or decisions, highlighting dependencies or critical thinking paths.
+  - trigger: ":gsteps"
+    replace: "Break this down into a logical sequence of steps or decisions. Highlight any dependencies or critical thinking paths."
+
+  # ---
+  # Name: ID015 - Prioritize by Impact and Effort
+  # Tags: Prioritization, Decision-Making, Strategy
+  # Use cases: Task management, project planning, resource allocation
+  # Description: Helps prioritize items based on impact and effort, justifying the top 3 choices briefly.
+  - trigger: ":gprioritize"
+    replace: "Help me prioritize these based on impact and effort. Justify your top 3 choices briefly."
+
+  # ---
+  # Name: ID018 - Translate to Action Plan
+  # Tags: Action Planning, Implementation, Strategy
+  # Use cases: Converting insights to steps, practical application, project execution
+  # Description: Translates an insight into a concrete action plan or next step, including the reasoning behind each action.
+  - trigger: ":gaction"
+    replace: "Translate this insight into a concrete action plan or next step. Include the why behind each action."
+
+  # ---
+  # Name: ID036 - Next Logical Step (Markup)
+  # Tags: Action, Markup, Next Steps
+  # Use cases: Guiding conversation, planning next actions, task sequencing
+  # Description: A concise markup prompt to ask for the next logical step or action.
+  - trigger: ":gnext"
+    replace: "#next — What is the next logical step or action?"
+
+  # ---
+  # Name: ID039 - High-Level Overview (Markup)
+  # Tags: Overview, Markup, Structure
+  # Use cases: Understanding complex ideas, conceptual mapping, high-level planning
+  # Description: A concise markup prompt to get a high-level overview or concept map of an idea or process.
+  - trigger: ":gmap"
+    replace: "#map — Give me a high-level overview or concept map of the idea or process."
+
+  # ---
+  # Name: ID040 - List Current Checkpoints (Markup)
+  # Tags: Progress, Markup, Checkpoints
+  # Use cases: Tracking progress, summarizing key insights, maintaining context
+  # Description: A concise markup prompt to list current insights, assumptions, or decisions made so far.
+  - trigger: ":gcheckpoint"
+    replace: "#checkpoint — List current insights, assumptions, or decisions so far."
+
+  # ---
+  # Name: ID044 - Generate Structured Outline (Markup)
+  # Tags: Outline, Markup, Structure
+  # Use cases: Content creation, planning, organizing thoughts
+  # Description: A concise markup prompt to generate a structured outline for a topic.
+  - trigger: ":goutline"
+    replace: "#outline — Generate a structured outline for this topic."
+
+  # ---
+  # Name: ID061 - Decision Tree/Flow
+  # Tags: Decision-Making, Flowchart, Planning
+  # Use cases: Guiding decisions, process mapping, understanding complex scenarios
+  # Description: Builds a decision tree or flow for a situation, including if/then paths, trade-offs, and criteria for choosing a branch.
+  - trigger: ":gflow"
+    replace: |
+      Build a decision tree or flow for this situation. Include if/then paths, trade-offs, and criteria for choosing a branch.
+
+  # ---
+  # Name: ID067 - GPT-Driven Deep Research Plan
+  # Tags: Research, Planning, Strategy
+  # Use cases: Structured research, identifying high-value questions, synthesizing findings
+  # Description: Turns a topic or conversation into a GPT-driven deep research plan, identifying real questions, clarifying, outlining paths, and suggesting checkpoints.
+  - trigger: ":gdeepplan"
+    replace: |
+      Turn this topic or conversation into a GPT-driven deep research plan.
+
+      Do the following:
+      1. Identify the *real question(s)* worth researching here — aim for what’s non-obvious, high-value, or strategically important.
+      2. Ask me the essential clarifying questions to sharpen the research direction and avoid shallow or generic output.
+      3. Outline a research path: what GPT should explore first, what angles or sources are essential, and how findings should be synthesized.
+      4. Suggest checkpoints, comparisons, or thought experiments that would deepen or challenge the results.
+
+      Assume research costs time and tokens — make it count. Focus where depth yields insight, not just data.
+
+  # ---
+  # Name: ID073 - Modular Breakdown Prompting
+  # Tags: Structure, Modularity, Organization
+  # Use cases: Content creation, technical documentation, easy navigation
+  # Description: Structures the response into clearly labeled, self-contained sections, each focused on a specific sub-topic, for easy digestion and repurposing.
+  - trigger: ":gbreakdown"
+    replace: |
+      Use Modular Breakdown Prompting:
+
+      Structure your response as clearly labeled sections, each focused on a specific sub-topic.
+      Each section should:
+      - Be self-contained
+      - Flow logically from the previous
+      - Cover one clear concept or component
+
+      Example output:
+      1. Introduction
+      2. Key Concepts
+      3. Practical Applications
+      3. Case Study
+      5. Summary and Takeaways
+
+      Aim to make the content easy to digest, navigate, and repurpose.
+
+  # ---
+  # Name: ID074 - Modular Section Breakdown
+  # Tags: Structure, Modularity, Organization
+  # Use cases: Simplifying complex topics, structured writing, easy content navigation
+  # Description: Breaks content into clear, labeled, and modular sections, each covering one sub-topic for easy reuse or navigation.
+  - trigger: ":gmodular"
+    replace: "Break this into clear, labeled sections—each covering one sub-topic. Keep it modular and easy to reuse or navigate."
+
+  # ---
+  # Name: ID089 - Mixin Structure
+  # Tags: Structure, Formatting, Decision-Making
+  # Use cases: Standardized reporting, clear communication, structured problem-solving
+  # Description: Uses a predefined structure: Goal, Constraints, Options, Decision, and Why.
+  - trigger: ":gmixin"
+    replace: |
+      Use this structure:
+      - Goal:
+      - Constraints:
+      - Options:
+      - Decision:
+      - Why:
+
+  # ---
+  # Name: ID094 - Structure with Known Pattern
+  # Tags: Structure, Patterns, Organization
+  # Use cases: Consistent formatting, applying design principles, structured problem-solving
+  # Description: Structures the response using a known pattern, mapping sections accordingly and explaining why the pattern fits.
+  - trigger: ":gblueprint"
+    replace: |
+      Structure your response using a known pattern:
+      - [Pattern Name]
+      - Map each section accordingly
+      - Brief explanation for why this pattern fits the situation
+
+  # ---
+  # Name: ID095 - API-like Structure
+  # Tags: Structure, API, Formatting
+  # Use cases: Standardized data exchange, consistent output, programmatic interaction
+  # Description: Defines an expected input/output structure for the AI's response, including format details.
+  - trigger: ":gapi"
+    replace: |
+      Expected structure:
+      Input: [Goal, Constraints, Preferences]
+      Output: [Steps, Rationale, Risks]
+      Format: Markdown, 3 sections, under 300 words.
+
+  # Group Name: Evaluation & Comparison Prompts
+  # Group Purpose: These snippets enable detailed assessment of ideas, options, and responses, facilitating informed decision-making through structured comparisons, scoring, and critical analysis.
+  # ---
+  # Name: ID019 - Compare Against Alternatives
+  # Tags: Comparison, Evaluation, Trade-offs
+  # Use cases: Decision-making, benchmarking, understanding pros and cons
+  # Description: Compares a concept against a best practice, known framework, or alternative approach, highlighting trade-offs.
+  - trigger: ":gcompare"
+    replace: "Compare this against a best practice, known framework, or alternative approach. What are the trade-offs?"
+
+  # ---
+  # Name: ID037 - Show Opposing Viewpoints (Markup)
+  # Tags: Debate, Markup, Perspectives
+  # Use cases: Balanced discussion, understanding controversies, exploring different sides
+  # Description: A concise markup prompt to show opposing viewpoints with balanced arguments.
+  - trigger: ":gdebate"
+    replace: "?debate — Show opposing viewpoints with balanced arguments."
+
+  # ---
+  # Name: ID077 - Compare Viable Options
+  # Tags: Comparison, Evaluation, Decision-Making
+  # Use cases: Choosing between alternatives, understanding trade-offs, making recommendations
+  # Description: Compares the top 2–3 most viable options, outlining benefits, trade-offs, best-fit scenarios, and a recommendation.
+  - trigger: ":gcomparex"
+    replace: |
+      Compare the top 2–3 most viable options for this.
+      For each, outline:
+      - Key benefits
+      - Trade-offs or risks
+      - Best-fit scenarios
+
+      Conclude with a short recommendation.
+
+  # ---
+  # Name: ID081 - Score with Weighted Criteria
+  # Tags: Prioritization, Scoring, Decision-Making
+  # Use cases: Objective evaluation, complex decision support, transparent selection
+  # Description: Scores options using weighted criteria (e.g., impact, effort) on a 1–10 scale, calculates weighted totals, and ranks them.
+  - trigger: ":gweights"
+    replace: |
+      Score each option using weighted criteria.
+
+      Steps:
+      1. Define key criteria (e.g., impact, effort, clarity, alignment, novelty).
+      2. Assign a weight to each criterion (e.g., impact: 40%, effort: 20%, etc.)
+      3. Score each option on a 1–10 scale for each criterion.
+      4. Calculate weighted total scores.
+
+      Then rank the options by highest total value.
+
+  # ---
+  # Name: ID082 - ICE Framework Prioritization
+  # Tags: Prioritization, Framework, Decision-Making
+  # Use cases: Product management, initiative selection, rapid prototyping
+  # Description: Uses the ICE framework (Impact × Confidence × Ease) to score ideas or initiatives on a 1–10 scale and sorts by ICE score.
+  - trigger: ":gice"
+    replace: |
+      Use the ICE framework (Impact × Confidence × Ease) to score each idea or initiative.
+
+      - Impact: How much value could it create?
+      - Confidence: How certain are we about that impact?
+      - Ease: How easy is it to implement?
+
+      Score 1–10 and sort by ICE score = (Impact × Confidence × Ease) / 3
+
+  # ---
+  # Name: ID083 - RICE Framework Prioritization
+  # Tags: Prioritization, Framework, Decision-Making
+  # Use cases: Product roadmap planning, feature prioritization, resource allocation
+  # Description: Uses the RICE framework (Reach × Impact × Confidence ÷ Effort) to prioritize, scoring each factor and calculating the RICE score.
+  - trigger: ":grice"
+    replace: |
+      Use the RICE framework (Reach × Impact × Confidence ÷ Effort) to prioritize.
+
+      Score each:
+      - Reach: # of users affected
+      - Impact: Value per user
+      - Confidence: Certainty of benefit
+      - Effort: Time/resources needed
+
+      RICE score = (Reach × Impact × Confidence) ÷ Effort
+
+  # ---
+  # Name: ID084 - Rank by Value
+  # Tags: Ranking, Prioritization, Evaluation
+  # Use cases: Selecting best options, strategic alignment, justifying choices
+  # Description: Ranks options by strategic impact, feasibility, novelty, and relevance, providing short justifications for the top 3 picks.
+  - trigger: ":grank"
+    replace: |
+      Rank these from most to least valuable based on:
+      - Strategic impact
+      - Feasibility
+      - Novelty
+      - Relevance
+
+      Give a short justification for your top 3 picks.
+
+  # ---
+  # Name: ID085 - Grading Rubric Assessment
+  # Tags: Grading, Rubric, Assessment
+  # Use cases: Evaluating performance, quality control, objective feedback
+  # Description: Creates and uses a grading rubric (e.g., A–F or 0–5 stars) to assess options on clarity, originality, and fit to goal, with an explanation.
+  - trigger: ":ggrade"
+    replace: |
+      Create a grading rubric and assess each option using it.
+
+      For example:
+      - Clarity (A–F)
+      - Originality (A–F)
+      - Fit to goal (A–F)
+      - Overall grade and explanation
+
+      You can also use numeric scales (e.g., 0–5 stars).
+
+  # ---
+  # Name: ID086 - Filter Options by Criteria
+  # Tags: Filtering, Prioritization, Shortlisting
+  # Use cases: Quick decision-making, narrowing down choices, urgent tasks
+  # Description: Quickly filters options by must-have vs. nice-to-have, high vs. low effort, and immediate vs. later, providing a shortlist of top-priority candidates.
+  - trigger: ":gfilter"
+    replace: |
+      Quickly filter these options by:
+      - Must-have vs. nice-to-have
+      - High vs. low effort
+      - Immediate vs. later
+
+      Give a shortlist of top-priority candidates.
+
+  # ---
+  # Name: ID087 - Justify All Suggestions
+  # Tags: Justification, Reasoning, Transparency
+  # Use cases: Explaining decisions, building trust, structured communication
+  # Description: Includes a brief reasoning line ("Why:") for every suggestion, claim, or option listed, keeping it concise.
+  - trigger: ":gwhyall"
+    replace: |
+      For every suggestion, claim, or option you list, include a brief reasoning line using “Why:”.
+
+      Example:
+      1. Prioritize feature X
+         Why: It addresses the most frequent user complaint.
+
+      2. Delay campaign Y
+         Why: Audience interest is seasonally low in this quarter.
+
+      The reasoning should be concise—1–2 lines per item. No fluff, just clarity.
+
+  # ---
+  # Name: ID088 - Justify Each Option/Step
+  # Tags: Justification, Reasoning, Conciseness
+  # Use cases: Explaining choices, ensuring logical flow, brief insights
+  # Description: Adds a brief "Why:" explanation for each option or step listed, keeping it sharp and useful.
+  - trigger: ":gjustify"
+    replace: "Add a brief 'Why:' explanation for each option or step you list. One line is enough—keep it sharp and useful."
+
+  # ---
+  # Name: ID110 - Score Output by Criteria
+  # Tags: Scoring, Evaluation, Quality Assessment
+  # Use cases: Grading ideas, comparing answers, reviewing copy, objective feedback
+  # Description: Scores output based on clarity, insightfulness, actionability, and alignment with goal (1–10 scale), with short explanations.
+  - trigger: ":gscore"
+    replace: |
+      Score this output using the following criteria (1–10 scale each):
+      - Clarity
+      - Insightfulness
+      - Actionability
+      - Alignment with goal
+      Add a short explanation per score.
+      ✅ Use for: grading ideas, comparing answers, reviewing copy
+
+  # ---
+  # Name: ID111 - Evaluate Using Rubric
+  # Tags: Rubric, Evaluation, Quality Control
+  # Use cases: Structured assessment, comparing performance, identifying improvement areas
+  # Description: Evaluates output using a rubric (A–D grades) on structure, depth, relevance, and language/tone, explaining overall score and improvement.
+  - trigger: ":grubric"
+    replace: |
+      Evaluate this using a rubric:
+      - A = Excellent
+      - B = Good
+      - C = Adequate
+      - D = Poor
+
+      Grade each of:
+      - Structure
+      - Depth
+      - Relevance
+      - Language/tone
+      Then explain overall score and how to improve.
+
+  # ---
+  # Name: ID112 - Critique Own Output
+  # Tags: Critique, Self-Correction, Expert Review
+  # Use cases: Expert reviews, second passes, ideation sharpening, continuous improvement
+  # Description: Critiques the AI's own output, identifying strengths, weaknesses, what a critic might challenge, and what's missing.
+  - trigger: ":gcritique"
+    replace: |
+      Now critique your own output:
+      - What’s solid?
+      - What’s vague or underdeveloped?
+      - What would a critic or expert challenge?
+      - What’s missing that would make it stronger?
+      ✅ Use for: expert reviews, second passes, ideation sharpening
+
+  # ---
+  # Name: ID113 - Compare Two Responses
+  # Tags: Comparison, Evaluation, Analysis
+  # Use cases: Reviewing GPT variants, comparing ideas, selecting best options
+  # Description: Compares two responses based on depth of reasoning, relevance to goal, style/clarity, and efficiency, then declares a winner.
+  - trigger: ":gcompare2"
+    replace: |
+      Compare the following two responses.
+      Which is more effective and why?
+
+      Assess using:
+      - Depth of reasoning
+      - Relevance to goal
+      - Style/clarity
+      - Efficiency (value per word)
+
+      Then declare a winner and explain why.
+      ✅ Use for: reviewing GPT variants, comparing ideas
+
+  # ---
+  # Name: ID114 - Assess Key Assumptions
+  # Tags: Assumptions, Risk Assessment, Validation
+  # Use cases: Strategy, forecasting, critical thinking, reducing project risk
+  # Description: Extracts key assumptions behind an idea, assigns confidence/risk levels, and suggests ways to test or validate, then suggests actions to reduce risk.
+  - trigger: ":gassess"
+    replace: |
+      Extract the key assumptions behind this idea.
+      For each, assign:
+      - Confidence level (High / Medium / Low)
+      - Risk if wrong
+      - Ways to test or validate
+
+      Then suggest 1–2 actions to reduce risk.
+      ✅ Use for: strategy, forecasting, critical thinking
+
+  # ---
+  # Name: ID115 - Fact-Checker/Peer Reviewer
+  # Tags: Fact-Checking, Review, Skepticism
+  # Use cases: Ensuring accuracy, verifying claims, objective reporting
+  # Description: Evaluates content like a fact-checker, looking for logical leaps, overclaims, unsupported statements, or cherry-picked reasoning, then rewrites it to pass a skeptic's review.
+  - trigger: ":gtruth"
+    replace: |
+      Evaluate this like a fact-checker or peer reviewer.
+      Look for:
+      - Logical leaps
+      - Overclaims or vague terms
+      - Unsupported statements
+      - Cherry-picked reasoning
+
+      Then rewrite it to pass a skeptic’s review.
+
+  # ---
+  # Name: ID116 - Use Measurement-Based Language
+  # Tags: Measurement, Data-Driven, Persuasion
+  # Use cases: Data-driven writing, strategy, persuasive reasoning, objective reporting
+  # Description: Encourages the use of measurement-based language (% impact, magnitude, cost vs. return) when making claims, grounding statements in implied metrics.
+  - trigger: ":gmeasurelang"
+    replace: |
+      When making any claim, use measurement-based language if possible:
+      - % impact
+      - magnitude of change
+      - size of effect
+      - cost vs. return
+      - speed, accuracy, volume
+
+      Ground statements in implied metrics.
+      ✅ Use for: data-driven writing, strategy, persuasive reasoning
+
+  # ---
+  # Name: ID117 - Fitness Score Evaluation
+  # Tags: Scoring, Fitness, Quality Assessment
+  # Use cases: Grading output, comparing solutions, optimizing for specific goals
+  # Description: Gives an output a Fitness Score (0–100) based on usefulness, accuracy, persuasiveness, conciseness, and readability, with an explanation and upgrade suggestion.
+  - trigger: ":gfitness"
+    replace: |
+      Give this output a Fitness Score from 0–100 for the current use case.
+      Break it down by:
+      - Usefulness
+      - Accuracy
+      - Persuasiveness
+      - Conciseness
+      - Readability
+
+      Include an explanation and one upgrade suggestion.
+
+  # Group Name: Simulation & Role-Playing Prompts
+  # Group Purpose: These snippets instruct GPT to simulate real-world scenarios, role-play different personas, and explore various outcomes, enhancing understanding and strategic foresight.
+  # ---
+  # Name: ID021 - Simulate Thoughtful Approach
+  # Tags: Simulation, Thinking, Reasoning
+  # Use cases: Understanding complex decision processes, learning from simulated experts, strategic foresight
+  # Description: Simulates how a thoughtful person would approach a problem, breaking down their reasoning, decision-making process, and trade-offs.
+  - trigger: ":gsimthink"
+    replace: "Simulate how a thoughtful person would approach this. Break down their reasoning, decision-making process, and what trade-offs they would consider."
+
+  # ---
+  # Name: ID022 - Roleplay Simulation
+  # Tags: Simulation, Roleplay, Perspective
+  # Use cases: Understanding stakeholder views, preparing for interactions, empathy building
+  # Description: Instructs the AI to roleplay as a specified persona (e.g., CEO, mentor) and respond from that role's perspective with a realistic thought process.
+  - trigger: ":gsimrole"
+    replace: "Roleplay as a [insert role: e.g. CEO, mentor, product manager, historian, customer]. Respond to the situation from that role’s perspective with realistic thought process."
+
+  # ---
+  # Name: ID023 - Simulate Realistic Conversation
+  # Tags: Simulation, Conversation, Communication
+  # Use cases: Scriptwriting, dialogue practice, understanding interpersonal dynamics
+  # Description: Simulates a realistic, natural, emotionally intelligent, and believable conversation between two specified people about a topic.
+  - trigger: ":gsimchat"
+    replace: "Simulate a realistic conversation between [Person A] and [Person B] about this topic. Make it natural, emotionally intelligent, and believable."
+
+  # ---
+  # Name: ID024 - Simulate Realistic Choices
+  # Tags: Simulation, Decision-Making, Options
+  # Use cases: Exploring possibilities, understanding motivations, preparing for scenarios
+  # Description: Provides realistic options a person might consider in a given situation, explaining why each might be appealing or problematic.
+  - trigger: ":gsimchoices"
+    replace: "Give me realistic options a person might consider in this situation. Explain why each might be appealing or problematic."
+
+  # ---
+  # Name: ID025 - Simulate Potential Errors
+  # Tags: Simulation, Risk Assessment, Error Analysis
+  # Use cases: Preventing mistakes, pre-mortem analysis, training for potential issues
+  # Description: Simulates what might go wrong if someone misunderstood, ignored, or rushed through a task, identifying realistic errors or missteps.
+  - trigger: ":gsimerror"
+    replace: "Simulate what might go wrong if someone misunderstood, ignored, or rushed through this. What are realistic errors or missteps that could happen?"
+
+  # ---
+  # Name: ID026 - Simulate Brief Debate
+  # Tags: Simulation, Debate, Critical Thinking
+  # Use cases: Exploring pros and cons, understanding controversies, exploring different sides
+  # Description: Simulates a brief debate between two opposing views on a topic, ensuring both sides are intelligent and grounded in real-world logic.
+  - trigger: ":gsimdebate"
+    replace: "Simulate a brief debate between two opposing views on this topic. Make both sides intelligent and grounded in real-world logic."
+
+  # ---
+  # Name: ID027 - Simulate Experience Journey
+  # Tags: Simulation, Journey Mapping, User Experience
+  # Use cases: Understanding user flows, product design, empathizing with user struggles
+  # Description: Simulates how someone might go through this experience over time, including emotional shifts, milestones, setbacks, and learning moments.
+  - trigger: ":gsimjourney"
+    replace: "Simulate how someone might go through this experience over time. Include emotional shifts, milestones, setbacks, and learning moments."
+
+  # ---
+  # Name: ID028 - Simulate System Behavior
+  # Tags: Simulation, Systems Thinking, Risk Analysis
+  # Use cases: Stress testing, understanding complex systems, identifying emergent behaviors
+  # Description: Simulates how a system would behave under stress, scaling, or unexpected inputs, highlighting key interactions, risks, and emergent behaviors.
+  - trigger: ":gsimsystem"
+    replace: "Simulate how this system would behave under stress, scaling, or unexpected inputs. Highlight key interactions, risks, and emergent behaviors."
+
+  # ---
+  # Name: ID029 - Simulate Full Scenario
+  # Tags: Simulation, Scenario Planning, Foresight
+  # Use cases: Strategic planning, crisis preparation, exploring future possibilities
+  # Description: Simulates a full scenario including setting, agents, actions, and consequences over time, grounded in realistic assumptions.
+  - trigger: ":gsimscenario"
+    replace: "Simulate a full scenario: the setting, agents involved, key actions taken, and the consequences that unfold over time. Keep it grounded in realistic assumptions."
+
+  # ---
+  # Name: ID030 - Simulate Wise Mentor Guidance
+  # Tags: Simulation, Mentorship, Guidance
+  # Use cases: Personal development, decision support, learning from experienced perspectives
+  # Description: Simulates how a wise mentor would guide someone through a situation, including what they would say, ask, or suggest.
+  - trigger: ":gsimmentor"
+    replace: "Simulate how a wise mentor would guide someone through this situation. What would they say, ask, or suggest?"
+
+  # ---
+  # Name: ID041 - Simulate Realistic Response (Markup)
+  # Tags: Simulation, Markup, Realism
+  # Use cases: Understanding human behavior, system response, realistic scenario planning
+  # Description: A concise markup prompt to simulate a person or system responding realistically.
+  - trigger: ":gsim"
+    replace: "!sim — Simulate a person or system responding to this realistically."
+
+  # ---
+  # Name: ID062 - Timeshift Simulation
+  # Tags: Simulation, Foresight, Evolution
+  # Use cases: Future planning, predicting trends, understanding long-term impacts
+  # Description: Simulates how a situation would evolve after 1 week, 1 month, and 1 year, including changes, risks, and new opportunities.
+  - trigger: ":gtimeshift"
+    replace: |
+      Simulate how this situation would evolve:
+      - After 1 week
+      - After 1 month
+      - After 1 year
+      Include changes, risks, and new opportunities.
+
+  # ---
+  # Name: ID101 - Villain Exploitation & Protection
+  # Tags: Risk, Security, Dark Patterns
+  # Use cases: Cybersecurity, legal, UX, dark patterns, propaganda awareness, proactive defense
+  # Description: Explains how someone with bad intentions would exploit a situation, then flips it to inform protection, fixes, or wiser communication.
+  - trigger: ":gvillain"
+    replace: |
+      Explain how someone with bad intentions would exploit this situation or system.
+      Then flip that to inform how we should protect, fix, or communicate more wisely.
+      ✅ Useful for: cybersecurity, legal, UX, dark patterns, propaganda awareness
+
+  # ---
+  # Name: ID107 - Timeless Perspectives
+  # Tags: Foresight, Historical Analysis, Product Durability
+  # Use cases: Future-back thinking, historical analysis, product durability, understanding long-term trends
+  # Description: Views a problem from the perspective of an ancient philosopher, a 1900s futurist, and a posthuman AI in 2200, identifying timeless patterns.
+  - trigger: ":gtimeless"
+    replace: |
+      How would an ancient philosopher, a 1900s futurist, and a posthuman AI in 2200 view this problem?
+      What patterns span across time?
+      ✅ Useful for: future-back thinking, historical analysis, product durability
+
+  # Group Name: GPT Management & Interaction
+  # Group Purpose: These snippets manage the state and behavior of the GPT model, including memory updates, context handling, instruction generation, and managing structured interactions.
+  # ---
+  # Name: ID004 - Ask Clarifying Questions
+  # Tags: Clarity, Understanding, Context
+  # Use cases: Ensuring relevance, getting more information, tailoring responses
+  # Description: Requests the AI to ask clarifying questions before proceeding, helping it better understand goals, context, or constraints for a more relevant and tailored response.
+  - trigger: ":gask"
+    replace: "Before you continue, please ask any clarifying questions that would help you better understand my goals, context, or constraints—so your response is as relevant, valuable, and tailored as possible."
+
+  # ---
+  # Name: ID017 - Improve Under Constraints
+  # Tags: Constraints, Optimization, Problem-Solving
+  # Use cases: Resource limitations, efficiency improvement, creative constraint challenges
+  # Description: Improves a solution or idea under tighter constraints, such as less time, a smaller budget, or simpler tools, with specific suggestions.
+  - trigger: ":gconstraints"
+    replace: "Improve this solution/idea under tighter constraints: less time, smaller budget, or simpler tools. Be specific."
+
+  # ---
+  # Name: ID051 - Numbered Output for Selection
+  # Tags: Interaction, Numbering, Selection
+  # Use cases: Interactive prompts, option selection, structured feedback
+  # Description: Formats AI output as a numbered list of options or questions, allowing the user to respond with corresponding numbers.
+  - trigger: ":gselect"
+    replace: "Format your output as a numbered list of options, improvements, or clarifying questions. I’ll respond with numbers like [1] or [2.3] to indicate my choices or answers. Keep numbering clear and consistent."
+
+  # ---
+  # Name: ID052 - Reformat as Numbered List
+  # Tags: Formatting, Numbering, Readability
+  # Use cases: Structuring past responses, easy referencing, improving organization
+  # Description: Reformats the AI's last response as a clearly numbered list for easy referencing.
+  - trigger: ":gnumberify"
+    replace: "Can you reformat your last response as a clearly numbered list so I can reference options using [1], [2], etc.?"
+
+  # ---
+  # Name: ID054 - Use Known Framework
+  # Tags: Frameworks, Structure, Problem-Solving
+  # Use cases: Structured analysis, applying methodologies, consistent approach
+  # Description: Structures the response using a known framework (e.g., SWOT, First Principles), mentioning which one was used.
+  - trigger: ":gframework"
+    replace: |
+      Use a known framework (e.g. SWOT, First Principles, 5 Whys, Eisenhower Matrix, Inverted Pyramid, AIDA) to structure your response to this problem. Mention which one you used.
+
+  # ---
+  # Name: ID057 - List Use Cases
+  # Tags: Use Cases, Brainstorming, Application
+  # Use cases: Product development, understanding utility, identifying market opportunities
+  # Description: Lists 3–5 different use cases for an idea, solution, or product, including at least one unconventional use.
+  - trigger: ":gusecases"
+    replace: |
+      List 3–5 different use cases for this idea, solution, or product. Include at least one unconventional or unexpected use.
+
+  # ---
+  # Name: ID059 - Boilerplate Template
+  # Tags: Template, Reusability, Formatting
+  # Use cases: Creating standardized documents, automating content, quick starts
+  # Description: Turns content into a reusable template or boilerplate format with placeholder variables, making it flexible and adaptable.
+  - trigger: ":gboiler"
+    replace: |
+      Turn this into a reusable template or boilerplate format with placeholder variables. Make it flexible and easy to adapt.
+
+  # ---
+  # Name: ID063 - Generate Custom GPT Instructions
+  # Tags: Custom GPT, Instructions, AI Management
+  # Use cases: Creating personalized AI assistants, saving interaction preferences, building AI personas
+  # Description: Turns conversation history into reusable Custom GPT instructions, extracting behavioral patterns, structural approaches, prompt types, tone preferences, and reusable logic.
+  - trigger: ":ginstructify"
+    replace: |
+      Turn everything we've done in this conversation so far into a reusable set of Custom GPT instructions.
+
+      Extract:
+      - Behavioral patterns and interaction style I prefer
+      - Structural approaches or frameworks I use
+      - Types of prompts I tend to give or respond to
+      - Tone, clarity, or formatting I appreciate
+      - Any reusable reasoning, logic, or systems from this session
+
+      Output as:
+      1. “How I should respond”
+      2. “What I should avoid”
+      3. “Formatting and tone preferences”
+      4. “Reusable logic, frameworks, or techniques”
+      5. “Summary of your user’s goals and style”
+
+  # ---
+  # Name: ID068 - Recalibrate Research Path
+  # Tags: Research, Recalibration, Strategy
+  # Use cases: Course correction, ensuring relevance, optimizing research efforts
+  # Description: Before continuing research, asks if the highest-value question is still being pursued, if there are missed angles, or if a pivot is needed.
+  - trigger: ":grecalibrate"
+    replace: |
+      Before continuing this research path, ask:
+      - Are we still chasing the highest-value question?
+      - Are there second-order effects or missed angles?
+      - Is this worth going deeper, or do we pivot?
+
+  # ---
+  # Name: ID069 - Apply New Research Lens
+  # Tags: Research, Perspective, Critical Thinking
+  # Use cases: Exploring diverse viewpoints, uncovering new insights, challenging assumptions
+  # Description: Applies a new lens to research (e.g., contrarian, investor) to see if it leads to different sources or questions.
+  - trigger: ":glensresearch"
+    replace: |
+      Apply a new lens to this research:
+      - What would a contrarian, investor, scientist, historian, or skeptic look for here?
+      - Would that lead us to different sources or different questions?
+
+  # ---
+  # Name: ID075 - Apply Dials to Output
+  # Tags: Customization, Tone, Style
+  # Use cases: Adjusting communication style, tailoring content, experimenting with voice
+  # Description: Adjusts aspects like formality, creativity, technicality, simplicity, and directness on a 1–10 scale, explaining each adjustment.
+  - trigger: ":gdials"
+    replace: |
+      Apply dials to this output. Adjust the following on a scale from 1–10 and briefly explain each adjustment:
+      - Formality
+      - Creativity
+      - Technicality
+      - Simplicity
+      - Directness
+
+  # ---
+  # Name: ID090 - Version Control Note
+  # Tags: Versioning, Tracking, Documentation
+  # Use cases: Tracking prompt changes, collaborative work, historical context
+  # Description: Adds a version tag to the prompt, noting changes from previous versions.
+  - trigger: ":gversion"
+    replace: "This is version [vX] of the prompt. Changes from previous: ..."
+
+  # ---
+  # Name: ID091 - Self-Check Output
+  # Tags: Self-Correction, Quality Control, Review
+  # Use cases: Ensuring accuracy, avoiding errors, improving response quality
+  # Description: Runs a self-check on the AI's output, looking for goal adherence, logical gaps, ambiguity, or unsubstantiated claims.
+  - trigger: ":gtest"
+    replace: |
+      Run a self-check on your output:
+      - Does it follow the original goal?
+      - Are there any logical gaps?
+      - Is anything ambiguous or unsubstantiated?
+
+  # ---
+  # Name: ID092 - Minimal Context Injection
+  # Tags: Context, Input, Efficiency
+  # Use cases: Providing focused information, streamlining AI responses, setting clear parameters
+  # Description: Provides the minimal context needed for the AI to answer, including user goal, simulated role, and known constraints.
+  - trigger: ":ginject"
+    replace: |
+      Here is the minimal context you need to answer:
+      - User goal:
+      - Role you should simulate:
+      - Known constraints:
+
+  # ---
+  # Name: ID093 - Linter for Prompt Review
+  # Tags: Prompt Engineering, Review, Clarity
+  # Use cases: Improving prompt quality, identifying issues in instructions, refining AI input
+  # Description: Reviews the user's prompt like a linter, checking for ambiguity, missing input, overloaded instructions, or scope creep, then rewrites it more clearly.
+  - trigger: ":glint"
+    replace: |
+      Review my prompt like a linter. Look for:
+      - Ambiguity
+      - Missing input
+      - Overloaded instruction
+      - Scope creep
+      Then rewrite it more clearly.
+
+  # ---
+  # Name: ID099 - Log Internal Reasoning Process
+  # Tags: Reasoning, Transparency, Logging
+  # Use cases: Debugging AI output, understanding AI decision-making, auditing AI responses
+  # Description: Logs the AI's internal reasoning process step-by-step, detailing information usage, exclusions, and factor weighting.
+  - trigger: ":glog"
+    replace: |
+      Log your internal reasoning process step-by-step as you generate the output:
+      - What info you're using
+      - What you’re excluding
+      - How you’re weighting different factors
+
+  # ---
+  # Name: ID102 - Mutate Idea to Extreme
+  # Tags: Creativity, Ideation, Innovation
+  # Use cases: Creative ideation, testing startup ideas, pushing originality, breaking conventional thinking
+  # Description: Mutates an idea to the extreme by amplifying, reversing, or hybridizing it, to see what emerges, breaks, or surprises.
+  - trigger: ":gmutate"
+    replace: |
+      Mutate this idea to the extreme—amplify it, reverse it, hybridize it with something unrelated.
+      What emerges? What breaks? What surprises you?
+      ✅ Useful for: creative ideation, testing startup ideas, pushing originality
+
+  # ---
+  # Name: ID103 - Design Concept Like an Architect
+  # Tags: Architecture, Frameworks, Systems Design
+  # Use cases: Designing frameworks, systems design, teaching, product logic, structural understanding
+  # Description: Designs a concept like an architect, detailing its foundation, structure, weak points, and a design metaphor.
+  - trigger: ":garchitecture"
+    replace: |
+      Design this concept like an architect:
+      - Foundation: What principles support it?
+      - Structure: What holds it together?
+      - Weak points: What might collapse?
+      - Design metaphor: What does it *feel* like?
+      ✅ Useful for: frameworks, systems design, teaching, product logic
+
+  # ---
+  # Name: ID105 - Connect to Unrelated Idea
+  # Tags: Creativity, Metaphor, Interdisciplinary
+  # Use cases: Creativity, interdisciplinary strategy, storytelling, generating fresh perspectives
+  # Description: Connects an idea to something unrelated (e.g., jazz, quantum physics) to generate metaphors or insights.
+  - trigger: ":gjump"
+    replace: |
+      Connect this idea to something unrelated—like jazz, mycelium, ancient trade routes, or quantum physics.
+      What metaphors or insights emerge?
+      ✅ Useful for: creativity, interdisciplinary strategy, storytelling
+
+  # ---
+  # Name: ID109 - Deathbed Summary
+  # Tags: Purpose, Storytelling, Values
+  # Use cases: Purpose clarity, storytelling, values-based prioritization, profound reflection
+  # Description: Summarizes why this matters on a "deathbed," focusing on what truly endures.
+  - trigger: ":gdeathbed"
+    replace: |
+      If you had to summarize why this matters on your deathbed, what would you say?
+      What truly endures here?
+      ✅ Useful for: purpose clarity, storytelling, values-based prioritization
+
+  # ---
+  # Name: ID118 - Update GPT Memory
+  # Tags: GPT Management, Memory, Context
+  # Use cases: Custom GPT memory syncing, preference setting, team context, long-term conversations
+  # Description: Updates the AI's memory with provided information for recall in current and future chats, confirming the update and future usage.
+  - trigger: ":gupdate"
+    replace: |
+      Update your memory with the following information so you can recall it later in this and future chats:
+      ---
+      [Insert details you want GPT to remember — context, preferences, project info]
+      ---
+      Acknowledge the update and let me know how you'll use this going forward.
+      ✅ Use for: Custom GPT memory syncing, preference setting, team context
+
+  # ---
+  # Name: ID119 - GPT File Context
+  # Tags: File Upload, Context, Data Extraction
+  # Use cases: Onboarding PDFs, CSVs, transcripts, strategy docs, quick analysis of documents
+  # Description: Instructs the AI to extract key insights or data from an uploaded file, summarizing, highlighting anomalies, and suggesting actions.
+  - trigger: ":gfilecontext"
+    replace: |
+      Here's a file I’ve uploaded. Please extract key insights or data relevant to [goal/topic].
+      - Summarize in plain terms
+      - Highlight anomalies or patterns
+      - Suggest how to act on this content
+      Treat this file as a working document reference.
+      ✅ Use for: onboarding PDFs, CSVs, transcripts, strategy docs
+
+  # ---
+  # Name: ID120 - Reset Conversation Context
+  # Tags: Reset, Context, Reframing
+  # Use cases: Pivoting projects, context bloat, chat clutter cleanup, starting fresh
+  # Description: Resets the conversation context, forgetting previous assumptions and reframing with a new focus or objective, using only new provided input.
+  - trigger: ":greset"
+    replace: |
+      Let’s reset our conversation context.
+      - Forget previous assumptions
+      - Reframe using the following focus or objective:
+        [Insert new direction]
+      Start fresh, using only what I provide going forward.
+      ✅ Use for: pivoting projects, context bloat, chat clutter cleanup
+
+  # ---
+  # Name: ID121 - Pin Context for Session
+  # Tags: Context, Persistence, Focus
+  # Use cases: Long projects, writing assistants, simulated team roles, maintaining consistent parameters
+  # Description: Treats specified information as pinned context for the rest of the session, applying it to all future outputs without repetition.
+  - trigger: ":gpin"
+    replace: |
+      For the rest of this session, treat the following as pinned context:
+      ---
+      [Add key assumptions, principles, audience, goals]
+      ---
+      Don’t repeat this unless asked, but apply it to all future outputs.
+      ✅ Use for: long projects, writing assistants, simulated team roles
+
+  # ---
+  # Name: ID122 - Snapshot for GPT Handoff
+  # Tags: Handoff, Summarization, Portability
+  # Use cases: Custom GPT handoffs, exportable briefings, prompt portability, team collaboration
+  # Description: Summarizes everything established so far as instructions for another GPT, including objective, progress, tone, and next steps, making it reusable.
+  - trigger: ":gsnapshot"
+    replace: |
+      Summarize everything we’ve established so far as if creating instructions for another GPT to take over from here.
+      Include:
+      - Objective
+      - What’s been done
+      - Tone or constraints
+      - What to do next
+      Make it reusable and self-contained.
+      ✅ Use for: Custom GPT handoffs, exportable briefings, prompt portability
+
+  # ---
+  # Name: ID123 - Generate Custom GPT Instructions (Meta)
+  # Tags: GPT Management, Persona, AI Behavior
+  # Use cases: Building GPT personas, evolving role behaviors
+  # Description: Assumes the role of a Custom GPT and generates memory or system instructions based on the conversation to improve its future usefulness.
+  - trigger: ":gmeta"
+    replace: |
+      Assume you’re a Custom GPT. Based on our conversation so far, what memory or system instructions would you generate to help yourself behave more usefully for me next time?
+      Output them as YAML-style memory entries or setup guidelines.
+      ✅ Use for: building GPT personas, evolving role behaviors
+
+  # ---
+  # Name: ID124 - Ask About GPT Limits
+  # Tags: Boundaries, Clarity, Troubleshooting
+  # Use cases: Boundary awareness, dynamic prompting, troubleshooting confusion
+  # Description: Clarifies available memory/file capabilities, persistence across sessions, and what the AI cannot see or remember, to help the user prompt better.
+  - trigger: ":gasklimits"
+    replace: |
+      Before we continue, clarify:
+      - Which memory or file capabilities are available in this chat
+      - What’s persistent across sessions vs not
+      - What you cannot see or remember
+      This helps me prompt you better.
+      ✅ Use for: boundary awareness, dynamic prompting, troubleshooting confusion
+
+  # ---
+  # Name: ID125 - GPT Self-Reflection
+  # Tags: Reflection, Self-Correction, Performance Improvement
+  # Use cases: Meta-cognition triggering, GPT performance steering
+  # Description: Instructs the AI to step back and reflect on its recent responses, checking for repetitiveness, context grounding, and ways to improve its response strategy.
+  - trigger: ":greflect"
+    replace: |
+      Step back and reflect on your recent responses.
+      - Are you being repetitive or generic?
+      - Are you grounded in my actual context?
+      - What would make your output sharper or more helpful now?
+      Improve your response strategy going forward.
+      ✅ Use for: meta-cognition triggering, GPT performance steering
+
+  # Group Name: Specialized Frameworks & Models
+  # Group Purpose: These snippets apply specific analytical or design frameworks (like Double Diamond, JTBD, LIFT, First Principles) to guide GPT's thinking and output for structured problem-solving.
+  # ---
+  # Name: ID126 - Double Diamond Framework
+  # Tags: Framework, Problem-Solving, Design Thinking
+  # Use cases: Product and UX challenges, strategy brainstorms, bottleneck busting, team ideation prep
+  # Description: Guides the AI to work through a challenge using the Double Diamond framework (Discover, Define, Develop, Deliver) for structured creativity.
+  - trigger: ":gddiamond"
+    replace: |
+      Let's work through this challenge using the **Double Diamond framework**.
+      Help me break it down into four stages:
+
+      **1. Discover** – What are all the signals, user needs, and pain points related to this?
+      **2. Define** – What is the clearest core problem or opportunity we can now frame?
+      **3. Develop** – What are 3–5 possible ways we could address or solve this?
+      **4. Deliver** – Which one or two ideas are most promising to prototype or act on now?
+
+      If helpful, ask clarifying questions before continuing. Think with structured creativity.
+      ✅ Use for:
+      - Product and UX challenges
+      - Strategy brainstorms
+      - Bottleneck busting
+      - Team ideation prep
+      - When stuck with vague goals or tangled tasks
+
+  # ---
+  # Name: ID127 - Compact Double Diamond
+  # Tags: Framework, Problem-Solving, Conciseness
+  # Use cases: Quick problem clarification, rapid ideation, concise strategic thinking
+  # Description: Uses a compact version of the Double Diamond model to clarify a problem: Discover, Define, Develop, Deliver, keeping it concise but deep.
+  - trigger: ":gddfast"
+    replace: |
+      Use the Double Diamond model to clarify this problem:
+      1. What's really going on? (Discover)
+      2. What’s the sharpest version of the problem? (Define)
+      3. What solutions are worth exploring? (Develop)
+      4. Which would you recommend starting with? (Deliver)
+
+      Keep it compact but deep.
+
+  # ---
+  # Name: ID129 - Jobs to Be Done Analysis
+  # Tags: JTBD, User Needs, Product Analysis
+  # Use cases: Product development, understanding user motivations, identifying market opportunities
+  # Description: Analyzes a task or product using Jobs to Be Done (JTBD) thinking, detailing functional and emotional jobs, context, struggles, and hiring criteria.
+  - trigger: ":gjtbd"
+    replace: |
+      Analyze this task or product using **Jobs to Be Done (JTBD)** thinking:
+      - Functional Job: What is the user trying to get done?
+      - Emotional Job: What do they want to feel or avoid?
+      - Context: When and where is this happening?
+      - Struggle: What's preventing success today?
+      - Hiring Criteria: Why would they "hire" our product for this job?
+
+      Use plain language and user-centric insights.
+
+  # ---
+  # Name: ID130 - LIFT Model Evaluation
+  # Tags: LIFT Model, Conversion, Optimization
+  # Use cases: Marketing, UX design, conversion rate optimization, improving persuasive communication
+  # Description: Evaluates a concept, page, or flow using the LIFT Model (Value Proposition, Relevance, Clarity, Anxiety, Distraction, Urgency) and suggests concrete improvements.
+  - trigger: ":glift"
+    replace: |
+      Use the **LIFT Model** to evaluate or improve this concept/page/flow:
+      - Value Proposition: Is it clear and compelling?
+      - Relevance: Does it match user intent?
+      - Clarity: Is the message easy to understand?
+      - Anxiety: Are there hidden doubts or risks?
+      - Distraction: Are there visual or cognitive distractions?
+      - Urgency: Is there a reason to act now?
+
+      Suggest concrete improvements per point.
