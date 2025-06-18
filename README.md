@@ -1,8 +1,8 @@
-<<<<<<< Updated upstream
-# gpt-intelli-prompt-pro
+# gpt-intelli-prompt-pro (Espanso package)
 
 **Master your AI conversations with a professional library of high-leverage GPT prompt snippets.**
 
+This Espanso package is a professional toolkit that will transform your GPT interactions into a high-leverage workflow by codifying best-practice prompt snippets into simple, memorable triggers.
 ---
 
 ## 2. Table of Contents
