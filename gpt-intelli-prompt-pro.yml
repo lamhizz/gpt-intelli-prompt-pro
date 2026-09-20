@@ -1376,3 +1376,47 @@ matches:
       - Urgency: Is there a reason to act now?
 
       Suggest concrete improvements per point.
+
+  # ---
+  # Name: ID133 - Full-Stack Codebase & Architecture Audit
+  # Tags: Framework, Architecture, Codebase Audit, Engineering, Prioritization
+  # Use cases: Codebase health assessment, architecture review, technical debt audit, sprint improvement planning
+  # Description: Acts as a Principal Full-Stack Engineer and Product Architect to analyze the codebase across 7 lenses and generate a prioritized catalog of improvements with an executive matrix into improvement-ideas.md.
+  - trigger: ":gimprove"
+    replace: |
+      Role: Act as a Principal Full-Stack Engineer and Product Architect.
+
+      Task:
+      Analyze our codebase/architecture and generate a prioritized catalog of concrete, high-impact improvements. Output the complete result directly into a newly created or overwritten file named `improvement-ideas.md` in the project root.
+
+      Context & Scope:
+      Ground every single recommendation in our actual tech stack, directory structure, dependencies, configurations, and component tree. Avoid generic, surface-level advice that could apply to any project; point directly to existing code files and patterns.
+
+      Lenses to Examine:
+      1. Performance & Runtime Efficiency (CWV, bundle size, hydration/SSR, asset loading, memoization, database/API query waterfall).
+      2. State Management & Reactivity (Store architecture, re-render surfaces, optimistic UI, state synchronization, race conditions).
+      3. System Architecture & Maintainability (Tech debt, strict typing, modular isolation, boundary abstractions, dead code).
+      4. UX, Accessibility & Resilience (Perceived speed, keyboard navigation, a11y/ARIA contracts, error boundaries, offline/network fallbacks).
+      5. Product Friction & Value Leaks (Workflow dead ends, micro-conversion optimizations, onboarding drops, empty states).
+      6. Security, Auth & Hygiene (Input sanitization, route guards, token lifecycle, CSP/CORS, rate limiting, dependency auditing).
+      7. Observability, Telemetry & DX (Structured logging, error tracking breadcrumbs, funnel analytics instrumentation, build/dev tooling speed).
+
+      Output Requirements for `improvement-ideas.md`:
+      Structure the document into 3–5 overarching themes (e.g., "Runtime Resilience & Latency", "State & Data Architecture", "Core Ergonomics & Conversion").
+
+      For each idea within a theme, use this schema:
+      ### [THEME_CODE-001] Idea Title
+      - **Target Area:** Specific files, components, hooks, or configurations.
+      - **Problem / Opportunity:** Concrete evidence from the current implementation and why it matters.
+      - **Proposed Solution:** Actionable technical plan (patterns, refactors, libraries, or architectural changes).
+      - **Trade-offs & Risks:** Edge cases, bundle/memory impacts, breaking changes, or migration overhead.
+      - **Impact vs. Effort:** Rank both as Low / Medium / High.
+
+      Final Section in `improvement-ideas.md`:
+      Include an **Executive Prioritization Matrix** (Markdown table: `ID | Title | Theme | Impact | Effort | Category`), classifying each item as:
+      - **Quick Win:** High Impact, Low Effort
+      - **Strategic Bet:** High Impact, High Effort
+      - **Low-Hanging Fruit:** Low Impact, Low Effort
+      - **Deprioritize:** Low Impact, High Effort
+
+      Highlight the top 3 recommended items to tackle in the next sprint.

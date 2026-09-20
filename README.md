@@ -269,6 +269,7 @@ These snippets apply specific analytical or design frameworks (like Double Diamo
 | `:gddfast` | ID127 | Compact Double Diamond | Framework, Problem-Solving, Conciseness | Quick problem clarification, rapid ideation, concise strategic thinking |
 | `:gjtbd` | ID129 | Jobs to Be Done Analysis | JTBD, User Needs, Product Analysis | Product development, understanding user motivations, identifying market opportunities |
 | `:glift` | ID130 | LIFT Model Evaluation | LIFT Model, Conversion, Optimization | Marketing, UX design, conversion rate optimization, improving persuasive communication |
+| `:gimprove` | ID133 | Full-Stack Codebase & Architecture Audit | Framework, Architecture, Codebase Audit, Engineering, Prioritization | Codebase health assessment, architecture review, technical debt audit, sprint improvement planning |
 
 ---
 
