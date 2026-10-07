@@ -270,6 +270,7 @@ These snippets apply specific analytical or design frameworks (like Double Diamo
 | `:gjtbd` | ID129 | Jobs to Be Done Analysis | JTBD, User Needs, Product Analysis | Product development, understanding user motivations, identifying market opportunities |
 | `:glift` | ID130 | LIFT Model Evaluation | LIFT Model, Conversion, Optimization | Marketing, UX design, conversion rate optimization, improving persuasive communication |
 | `:gimprove` | ID133 | Full-Stack Codebase & Architecture Audit | Framework, Architecture, Codebase Audit, Engineering, Prioritization | Codebase health assessment, architecture review, technical debt audit, sprint improvement planning |
+| `:gideate` | ID134 | 80/20 Pareto Product Ideation | Product Strategy, Pareto Principle, 80/20, UX/UI, Prioritization, Ideation | Product feature brainstorming, backlog generation, 80/20 improvement planning, UX & utilization audit |
 
 ---
 

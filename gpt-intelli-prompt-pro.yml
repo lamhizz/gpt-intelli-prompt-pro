@@ -1420,3 +1420,40 @@ matches:
       - **Deprioritize:** Low Impact, High Effort
 
       Highlight the top 3 recommended items to tackle in the next sprint.
+
+  # ---
+  # Name: ID134 - 80/20 Pareto Product Ideation
+  # Tags: Product Strategy, Pareto Principle, 80/20, UX/UI, Prioritization, Ideation
+  # Use cases: Product feature brainstorming, backlog generation, 80/20 improvement planning, UX & utilization audit
+  # Description: Acts as a Senior Product Lead to review an app and brainstorm high-leverage 80/20 improvement ideas across UX (70%), Business (15%), and Engineering (15%), ending with a visual ASCII Pareto 2x2 prioritization matrix graph in ideas-backlog.md.
+  - trigger: ":gideate"
+    replace: |
+      Act as a Senior Product Lead. Review [insert app name and 1-sentence description of what it does].
+
+      Brainstorm a high-leverage set of improvement ideas anchored in the 80/20 Pareto principle (focusing on the 20% of changes that drive 80% of value, utilization, and user delight).
+
+      Core Lens Distribution:
+      - Primary focus (~70%): User-facing experience (UX/UI, usability, core feature depth, perceived value, workflow friction removal).
+      - Secondary focus (~15%): Business & product utilization (adoption loops, retention drivers, engagement mechanics, monetization/conversion lift).
+      - Tertiary focus (~15%): Engineering, performance & trust (perceived speed, architecture resilience, security, data integrity).
+
+      Include both immediate high-impact quick wins and bold, innovative leaps that expand the product's core utility.
+
+      Requirements:
+      1. Output the entire brainstorm directly into an `ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `UX-01`, `FEAT-01`, `BIZ-01`, `TECH-01`).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **Problem / Opportunity:** What friction or latent need does this address?
+         - **Proposed Solution:** Concrete feature, interaction, or architectural change.
+         - **Expected Impact & Value:** The measurable payoff or utility gain.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort — highlight standout 80/20 quick wins).
+      5. Conclude `ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID and short title into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top standout 80/20 quick wins to execute first.
