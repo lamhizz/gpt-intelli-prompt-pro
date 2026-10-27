@@ -1429,7 +1429,7 @@ matches:
   # Description: Acts as a Senior Product Lead to review an app and brainstorm high-leverage 80/20 improvement ideas across UX (70%), Business (15%), and Engineering (15%), ending with a visual ASCII Pareto 2x2 prioritization matrix graph in product-ideas-backlog.md.
   - trigger: ":gideate"
     replace: |
-      Act as a Senior Product Lead. Review [insert app name and 1-sentence description of what it does].
+      Act as a Senior Product Lead. Review this application and codebase.
 
       Brainstorm a high-leverage set of improvement ideas anchored in the 80/20 Pareto principle (focusing on the 20% of changes that drive 80% of value, utilization, and user delight).
 
@@ -1466,7 +1466,7 @@ matches:
   # Description: Acts as a Senior UX Copywriter and Conversion Strategist to audit and brainstorm 80/20 messaging improvements across UX writing (60%), conversion (30%), and tone (10%), ending with a visual ASCII Pareto 2x2 prioritization matrix graph in ux-copy-ideas-backlog.md.
   - trigger: ":guxcopy"
     replace: |
-      Act as a Senior UX Copywriter and Conversion Strategist. Review [insert app name and 1-sentence description of what it does].
+      Act as a Senior UX Copywriter and Conversion Strategist. Review this application and codebase.
 
       Brainstorm a high-leverage set of copywriting, messaging, and content strategy improvement ideas anchored in the 80/20 Pareto principle (focusing on the 20% of copy changes that drive 80% of clarity, conversion, and user delight).
 
@@ -1503,7 +1503,7 @@ matches:
   # Description: Acts as a Senior Principal UX/UI Designer and Cognitive Ergonomics Expert to brainstorm 80/20 improvements across cognitive psychology (60%), interaction patterns (25%), and micro-delight (15%), ending with a visual ASCII Pareto 2x2 prioritization matrix graph in ux-ideas-backlog.md.
   - trigger: ":guxui"
     replace: |
-      Act as a Senior Principal UX/UI Designer and Cognitive Ergonomics Expert. Review [insert app name and 1-sentence description of what it does].
+      Act as a Senior Principal UX/UI Designer and Cognitive Ergonomics Expert. Review this application and codebase.
 
       Brainstorm a high-leverage set of design and interaction improvements anchored in the 80/20 Pareto principle (focusing on the 20% of UI/UX changes that drive 80% of usability, task success, and user delight).
 
@@ -1541,9 +1541,7 @@ matches:
   # Description: Acts as a Principal Systems Architect and AI-Native DevEx Expert to optimize codebase scalability and context density for AI agents across 3 lenses (50% AI agent optimization, 30% system scalability, 20% guardrails), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
   - trigger: ":gsysarchitect"
     replace: |
-      Act as a Principal Systems Architect and AI-Native DevEx (Developer Experience) Expert. Review [insert app name, tech stack, and 1-sentence description].
-
-      (Optional: Paste your repository folder structure or a tree output here).
+      Act as a Principal Systems Architect and AI-Native DevEx (Developer Experience) Expert. Review this codebase and its architecture.
 
       Brainstorm a high-leverage set of architectural and codebase improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic refactoring initiatives that scale the application while heavily optimizing the codebase for AI coding agents (minimizing token usage, preventing LLM hallucinations, isolating context windows, and allowing agents to iterate safely).
 
@@ -1583,7 +1581,7 @@ matches:
   # Description: Acts as a Principal Security Architect and App Store Compliance Specialist to harden apps and ensure review approval across 3 lenses (50% store compliance, 30% app security, 20% privacy & trust), concluding with .cursorrules and an ASCII 2x2 prioritization matrix.
   - trigger: ":gsyssecurity"
     replace: |
-      Act as a Principal Security Architect and App Store Compliance Specialist. Review [insert app name, tech stack, target platforms (e.g., iOS App Store, Chrome Web Store), and a 1-sentence description].
+      Act as a Principal Security Architect and App Store Compliance Specialist. Review this codebase and application.
 
       Brainstorm a high-leverage set of security, privacy, and store-compliance improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that prevent automated or manual store rejections, harden the app against common vulnerabilities, and build deep user trust without over-engineering.
 
@@ -1623,9 +1621,7 @@ matches:
   # Description: Acts as a Principal Performance Engineer and Core Web Vitals Expert to optimize rendering (50%), network/payload (30%), and resource efficiency (20%), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
   - trigger: ":gsysperformance"
     replace: |
-      Act as a Principal Performance Engineer and Core Web Vitals Expert. Review [insert app name, tech stack, and 1-sentence description].
-
-      (Optional: Paste your Webpack/Vite bundle analyzer output, Lighthouse scores, or specific performance complaints here).
+      Act as a Principal Performance Engineer and Core Web Vitals Expert. Review this codebase and application.
 
       Brainstorm a high-leverage set of web and app performance optimizations anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that drastically reduce load times, eliminate UI stutter, shrink bundle sizes, and minimize battery/memory consumption on user devices.
 
@@ -1665,9 +1661,7 @@ matches:
   # Description: Acts as a Principal Accessibility Engineer and Inclusive Design Expert to audit WCAG compliance across 3 lenses (50% screen reader/keyboard, 30% visual/cognitive, 20% compliance & interactivity), concluding with .cursorrules and an ASCII 2x2 prioritization matrix.
   - trigger: ":gsysaccess"
     replace: |
-      Act as a Principal Accessibility (a11y) Engineer and Inclusive Design Expert. Review [insert app name, tech stack, and 1-sentence description].
-
-      (Optional: Paste your current accessibility audit results, Lighthouse a11y scores, or known compliance gaps here).
+      Act as a Principal Accessibility (a11y) Engineer and Inclusive Design Expert. Review this codebase and application.
 
       Brainstorm a high-leverage set of accessibility and inclusive design improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that achieve WCAG compliance, empower users with disabilities (visual, motor, auditory, and cognitive), and ensure the app is legally compliant and morally inclusive.
 
@@ -1707,9 +1701,7 @@ matches:
   # Description: Acts as a Principal QA Architect and DevOps Automation Expert to audit test suites across 3 lenses (50% high-ROI automated testing, 30% CI/CD pipelines, 20% AI-assisted TDD & guardrails), concluding with .cursorrules and an ASCII 2x2 prioritization matrix.
   - trigger: ":gsysqa"
     replace: |
-      Act as a Principal QA Architect and DevOps Automation Expert. Review [insert app name, tech stack, current testing frameworks (if any), and a 1-sentence description].
-
-      (Optional: Paste your current test coverage report, CI/CD workflow YAML, or a list of frequent production bugs here).
+      Act as a Principal QA Architect and DevOps Automation Expert. Review this codebase and its testing infrastructure.
 
       Brainstorm a high-leverage set of automated testing, QA, and pipeline improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eliminate manual regression testing, catch bugs before they merge, accelerate deployment velocity, and make it effortless for AI agents to write and verify their own tests.
 
@@ -1749,9 +1741,7 @@ matches:
   # Description: Acts as a Principal Technical SEO Architect and Growth Engineering Expert to optimize organic discoverability across 3 lenses (50% crawlability/indexing, 30% structured data & schema, 20% on-page automation & taxonomy), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
   - trigger: ":gsysseo"
     replace: |
-      Act as a Principal Technical SEO Architect and Growth Engineering Expert. Review [insert app/website name, frontend tech stack (e.g., Next.js, WordPress, Astro), and a 1-sentence description].
-
-      (Optional: Paste your Lighthouse SEO scores, Google Search Console coverage errors, current robots.txt, or URL structure here).
+      Act as a Principal Technical SEO Architect and Growth Engineering Expert. Review this codebase and website architecture.
 
       Brainstorm a high-leverage set of technical SEO and organic discoverability improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eliminate crawl bottlenecks, maximize SERP real estate through rich snippets, and ensure your content architecture sends crystal-clear relevance signals to search engine algorithms.
 
@@ -1791,9 +1781,7 @@ matches:
   # Description: Acts as a Principal Database Architect and Data Engineering Expert to optimize database performance across 3 lenses (50% schema design & data modeling, 30% query optimization & ORM, 20% scalability & migrations), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
   - trigger: ":gsysdata"
     replace: |
-      Act as a Principal Database Architect and Data Engineering Expert. Review [insert app name, primary database technology (e.g., PostgreSQL, MongoDB, Redis), ORM/Query builder, and a 1-sentence description].
-
-      (Optional: Paste your current schema schema.prisma / schema.sql, a list of slow query logs, or your Entity-Relationship assumptions here).
+      Act as a Principal Database Architect and Data Engineering Expert. Review this codebase and its data layer.
 
       Brainstorm a high-leverage set of database architecture, schema design, and query optimization improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eliminate database bottlenecks, ensure strict data integrity, drastically reduce query latency, and structure the data layer so AI coding agents can generate safe, performant queries.
 
@@ -1833,9 +1821,7 @@ matches:
   # Description: Acts as a Principal Backend Architect and API Design Expert to mature backend systems across 3 lenses (50% API contracts & DevEx, 30% middleware pipeline, 20% architectural topology), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
   - trigger: ":gsysbackend"
     replace: |
-      Act as a Principal Backend Architect and API Design Expert. Review [insert app name, backend framework (e.g., Node/Express, FastAPI, NestJS), API style (REST/GraphQL/tRPC), and a 1-sentence description].
-
-      (Optional: Paste your OpenAPI/Swagger spec, a sample controller/route file, or your current middleware stack here).
+      Act as a Principal Backend Architect and API Design Expert. Review this codebase and its backend/API architecture.
 
       Brainstorm a high-leverage set of API design, backend architecture, and middleware improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that enforce strict data contracts, decouple complex logic, standardize error handling, and structure the backend so AI coding agents can reliably consume, extend, or generate typed clients for your API without hallucinating endpoints.
 
@@ -1874,9 +1860,7 @@ matches:
   # Description: Acts as a Principal Cloud Architect and DevSecOps Expert to optimize cloud infrastructure and pipelines across 3 lenses (50% IaC & containerization, 30% DevSecOps & deployments, 20% observability & FinOps), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
   - trigger: ":gsysdevops"
     replace: |
-      Act as a Principal Cloud Architect and DevSecOps Expert. Review [insert app name, current cloud provider (e.g., AWS, GCP, Vercel), containerization state, and a 1-sentence description].
-
-      (Optional: Paste your Dockerfile, Terraform state summary, GitHub Actions deploy workflow, or a list of infrastructure pain points here).
+      Act as a Principal Cloud Architect and DevSecOps Expert. Review this codebase and its cloud/deployment infrastructure.
 
       Brainstorm a high-leverage set of Cloud Infrastructure, Containerization, DevSecOps, and CI/CD improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that guarantee zero-downtime deployments, harden cloud security, drastically reduce hosting costs, and define Infrastructure as Code (IaC) so perfectly that AI coding agents can spin up reproducible environments on demand.
 
@@ -1916,9 +1900,7 @@ matches:
   # Description: Acts as a Principal Data Architect and Product Telemetry Expert to clean up and scale analytics across 3 lenses (50% event taxonomy & tracking, 30% data pipelines & architecture, 20% privacy, performance & observability), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
   - trigger: ":gsysanalytics"
     replace: |
-      Act as a Principal Data Architect and Product Telemetry Expert. Review [insert app name, current analytics stack (e.g., PostHog, Segment, Mixpanel, BigQuery, dbt), and a 1-sentence description].
-
-      (Optional: Paste your current event tracking plan, tracking schema/JSON, or a list of your most critical KPIs here).
+      Act as a Principal Data Architect and Product Telemetry Expert. Review this codebase and telemetry tracking setup.
 
       Brainstorm a high-leverage set of data analytics, telemetry, and observability improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eliminate 'junk data,' establish a pristine event taxonomy, ensure reliable data pipelines, and structure tracking code so AI agents can automatically instrument new features without violating your data model.
 
@@ -1958,9 +1940,7 @@ matches:
   # Description: Acts as a Principal AI Engineer and LLM Architect to optimize AI integrations across 3 lenses (50% RAG & context architecture, 30% prompt engineering & agentic workflows, 20% LLM ops, cost & safety), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
   - trigger: ":gsysagent"
     replace: |
-      Act as a Principal AI Engineer and LLM Architect. Review [insert app name, current AI stack (e.g., OpenAI API, LangChain, Pinecone, local models), and a 1-sentence description].
-
-      (Optional: Paste your current system prompts, RAG chunking logic, tool calling schemas, or specific AI latency/cost complaints here).
+      Act as a Principal AI Engineer and LLM Architect. Review this codebase and AI integration architecture.
 
       Brainstorm a high-leverage set of AI integration, RAG (Retrieval-Augmented Generation), and prompt engineering improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eliminate LLM hallucinations, reduce token latency and costs, structure agentic tool-calling reliably, and ensure your AI architecture is modular enough to swap models seamlessly.
 
@@ -2000,9 +1980,7 @@ matches:
   # Description: Acts as a Principal Design Systems Architect and 'Apple-Tier' Visual Engineer to unify rapid prototypes into a premium UI framework across 3 lenses (50% design tokens, 30% premium aesthetics, 20% spatial rhythm), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
   - trigger: ":gsysvisual"
     replace: |
-      Act as a Principal Design Systems Architect and 'Apple-Tier' Visual Engineer. Review [insert app name, frontend framework/styling solution (e.g., React/Tailwind, SwiftUI), and a 1-sentence description].
-
-      (Optional: Paste a list of your core screens, a description of your current UI components, or a screenshot/Figma link here).
+      Act as a Principal Design Systems Architect and 'Apple-Tier' Visual Engineer. Review this codebase and UI components.
 
       Brainstorm a high-leverage set of Design System and Visual Engineering improvements anchored in the 80/20 Pareto principle. The goal is to audit the chaotic byproduct of rapid prototyping—rogue layout patterns, inconsistent spacing, fragmented elements—and unify them into a harmonious, systematic, and premium UI framework. I want you to apply a ruthless, minimalist, holistic design mindset that elevates the app's completeness to world-class standards.
 
@@ -2035,3 +2013,201 @@ matches:
            * Bottom-Right: Low Impact / High Effort (Deprioritize)
          - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly harmonize the UI.
 
+  # ---
+  # Name: ID149 - Cross-Platform Capacitor & Mobile Architecture Audit
+  # Tags: Capacitor, Mobile Architecture, Cross-Platform, iOS, Android, Native Plugins, Safe Areas, Prioritization
+  # Use cases: Capacitor migration, web-to-mobile conversion, native plugin abstraction, mobile ergonomics audit, App Store readiness
+  # Description: Acts as a Principal Mobile Architect and Cross-Platform (Capacitor) Expert to transition web codebases to flawless native iOS/Android apps across 3 lenses (50% plugin architecture, 30% mobile ergonomics & native UI/UX, 20% build pipeline & store readiness), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gcapacitor"
+    replace: |
+      Act as a Principal Mobile Architect and Cross-Platform (Capacitor) Expert. Review this codebase and its mobile/Capacitor setup.
+
+      Brainstorm a high-leverage set of architectural, UI, and codebase improvements anchored in the 80/20 Pareto principle. No matter the current state of development, the goal is to ruthlessly audit deviations from 'the Capacitor way' and propose strategic refactoring initiatives. This will seamlessly transition the web codebase into a Capacitor-ready architecture, ensuring it can be compiled into a flawless native iOS and Android app.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Capacitor Plugin Architecture & API Abstraction (Replacing raw browser APIs with Capacitor Plugins [e.g., swapping localStorage for @capacitor/preferences, wrapping fetch for native CORS bypass], handling native permissions, and safely abstracting platform-specific logic using Capacitor.isNativePlatform()).
+      - Secondary focus (~30%): Mobile Ergonomics & Native UI/UX (Adapting CSS for CSS environment variables/safe areas [notches/home indicators], managing the software keyboard lifecycle, disabling web-like behaviors [text selection, pinch-to-zoom, rubber-band scrolling], and implementing native-like routing/hardware back-button support).
+      - Tertiary focus (~20%): Build Pipeline, Assets & Store Readiness (Structuring environments for seamless web vs. mobile builds, managing splash screens/icons, deep linking/Universal Links configuration, and isolating the ios and android native folders).
+
+      Include both immediate high-impact quick wins (e.g., injecting viewport-fit=cover, swapping out a web alert for a native dialog plugin) and bold, strategic leaps (e.g., implementing an adapter pattern for all hardware interactions).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `capacitor-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `CAP-01` for Capacitor APIs, `MOBUI-01` for Native UI, `BLD-01` for Build/Config).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific web-paradigm trap, native build failure, or mobile UX friction does this address?
+         - **Proposed Solution:** Concrete Capacitor plugin implementation, CSS structural change, or architectural abstraction.
+         - **Expected Impact:** Prevention of App Store rejection, native performance lift, or elimination of mobile specific bugs.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to refactor this specific API, layout, or configuration.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., absolutely forbidding the direct use of window.localStorage in favor of Capacitor Preferences, mandating env(safe-area-inset-*) for all fixed layout elements, and enforcing strict platform checks before calling hardware APIs).
+      6. Conclude `capacitor-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly unlock native readiness.
+
+  # ---
+  # Name: ID150 - iOS Architecture & App Store Review Readiness Audit
+  # Tags: iOS, App Store Compliance, HIG, Apple Review, Guideline 4.2, Sign in with Apple, Capacitor iOS, Prioritization
+  # Use cases: iOS App Store readiness, HIG compliance audits, Capacitor iOS polish, App Store rejection prevention, Guideline 4.2 compliance
+  # Description: Acts as a Principal iOS Architect and App Store Review Specialist to eliminate web artifacts and ensure App Store approval across 3 lenses (50% compliance & Guideline 4.2, 30% HIG & iOS ergonomics, 20% privacy & entitlements), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysapple"
+    replace: |
+      Act as a Principal iOS Architect and App Store Review Specialist. Review this codebase and its iOS/Capacitor configuration.
+
+      Brainstorm a high-leverage set of iOS-specific architectural, compliance, and UX improvements anchored in the 80/20 Pareto principle. The goal is to audit a Capacitor-based codebase and ruthlessly eliminate any 'wrapped website' artifacts. Your proposed initiatives must ensure the app sails through Apple’s App Store Review, perfectly adheres to the iOS Human Interface Guidelines (HIG), and feels indistinguishable from a Swift-native application.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): App Store Compliance & Guideline 4.2 (Ensuring 'Minimum Functionality' by eradicating web artifacts like text-selection magnifiers, 300ms click delays, rubber-band scrolling on fixed elements, and lack of offline fallbacks. Enforcing Apple's strict rules around In-App Purchases [Guideline 3.1.1]).
+      - Secondary focus (~30%): Human Interface Guidelines (HIG) & iOS Ergonomics (Flawless safe-area inset management for the Dynamic Island/Notch, native swipe-to-go-back routing gestures, iOS-standard bottom tab navigation, CoreHaptics feedback, and silky 120Hz-friendly animations).
+      - Tertiary focus (~20%): Privacy, Ecosystem & Entitlements (Mandatory implementation of 'Sign in with Apple' if other social logins are present, App Tracking Transparency [ATT] flows, hyper-specific NSUsageDescription strings for hardware permissions, and securely storing tokens in the iOS Keychain).
+
+      Include both immediate high-impact quick wins (e.g., disabling user-select globally, writing explicit camera permission strings) and bold, strategic leaps (e.g., implementing native Capacitor routing for fluid page transitions, integrating StoreKit for iOS IAPs).
+
+      Requirements:
+      1. Output the entire brainstorm directly into an `ios-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `IOSUX-01` for HIG/Ergonomics, `REJV-01` for App Store Rejection Prevention, `APL-01` for Ecosystem/Privacy).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific App Store Review Guideline violation, iOS UX friction, or 'web-like' giveaway does this address?
+         - **Proposed Solution:** Concrete Capacitor configuration, iOS-specific CSS tweak, or Swift/Plugin abstraction.
+         - **Expected Impact:** Prevention of App Store rejection, native perceived performance lift, or HIG compliance.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to refactor this specific iOS layout, config, or permission flow.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., mandating 'Sign in with Apple' logic whenever third-party auth is touched, strictly forbidding generic permission strings in Info.plist, and enforcing -webkit-touch-callout: none to prevent web popups).
+      6. Conclude `ios-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to guarantee Apple approval.
+
+  # ---
+  # Name: ID151 - Android Architecture & Google Play Store Readiness Audit
+  # Tags: Android, Google Play, Material Design, Capacitor Android, Back Button, Scoped Storage, Data Safety, Prioritization
+  # Use cases: Android Play Store readiness, Material Design 3 audits, Capacitor Android optimization, Google Play policy compliance, back-button handling
+  # Description: Acts as a Principal Android Architect and Google Play Policy Expert to audit Capacitor codebases for Google Play compliance across 3 lenses (50% Play policy & OS integration, 30% Material Design 3 & ergonomics, 20% performance & device fragmentation), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysandroid"
+    replace: |
+      Act as a Principal Android Architect and Google Play Policy Expert. Review this codebase and its Android/Capacitor configuration.
+
+      Brainstorm a high-leverage set of Android-specific architectural, compliance, and UX improvements anchored in the 80/20 Pareto principle. The goal is to audit a Capacitor-based codebase to ensure it survives Google Play’s strict policy reviews, performs flawlessly across a highly fragmented ecosystem of device sizes and memory constraints, and feels authentically native to Android users.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Google Play Compliance & OS Integration (Handling the Android hardware back-button routing perfectly, adhering to Scoped Storage requirements, managing Android 13+ granular media/notification permissions, Data Safety section compliance, and updating Target API levels).
+      - Secondary focus (~30%): Material Design 3 & Android Ergonomics (Implementing Material 'ripple' touch feedback, adapting UI for foldable devices and varied aspect ratios, utilizing Android-standard bottom sheets, and ensuring the Android 12+ Splash Screen API is properly configured to prevent double-splashing).
+      - Tertiary focus (~20%): Performance & Device Fragmentation (Optimizing the Capacitor Chromium WebView for low-memory devices, configuring ProGuard/R8 for AAB bundle size reduction, and handling background execution/doze mode limitations gracefully).
+
+      Include both immediate high-impact quick wins (e.g., intercepting the hardware back button to close modals instead of exiting the app) and bold, strategic leaps (e.g., implementing adaptive Material You dynamic coloring based on the user's OS theme).
+
+      Requirements:
+      1. Output the entire brainstorm directly into an `android-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `DROID-01` for OS Quirks, `PLAY-01` for Store Compliance, `MD3-01` for Material Design/UX).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific Google Play rejection risk, Android UX frustration, or WebView performance issue does this address?
+         - **Proposed Solution:** Concrete Capacitor configuration, Android XML manifest tweak, or Material Design CSS implementation.
+         - **Expected Impact:** Prevention of Play Store rejection, reduction in Android crash rates (ANRs), or authentic native feel.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to refactor this specific Android layout, config, or hardware API interaction.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., mandating the use of App.addListener('backButton') on all navigable screens and modals, forbidding legacy storage permission requests in favor of Scoped Storage, and enforcing platform-specific UI rendering [e.g., hiding iOS 'back chevrons' on Android]).
+      6. Conclude `android-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to guarantee Google Play approval and Android user satisfaction.
+
+  # ---
+  # Name: ID152 - Offline-First, Local Persistence & Sync Architecture Audit
+  # Tags: Offline-First, Local-First, Sync, IndexedDB, SQLite, CRDTs, Service Workers, Optimistic UI, Prioritization
+  # Use cases: Offline-first audits, local data persistence architecture, sync queue implementation, conflict resolution, offline UX optimization
+  # Description: Acts as a Principal Offline-First Architect and Distributed Systems Expert to transform apps into resilient local-first powerhouses across 3 lenses (50% local persistence & state, 30% sync resiliency & conflict resolution, 20% asset caching & service workers), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysoffline"
+    replace: |
+      Act as a Principal Offline-First Architect and Distributed Systems Expert. Review this codebase and its data persistence/sync architecture.
+
+      Brainstorm a high-leverage set of Offline-First, Sync Resiliency, and Local Data Persistence improvements anchored in the 80/20 Pareto principle. The goal is to audit the codebase and propose strategic initiatives that transform the app from a fragile 'network-dependent' shell into a robust, local-first powerhouse where the UI is always instant, data is safely persisted on the device, and syncing happens invisibly in the background.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Local Persistence & Offline-First State (Migrating from memory-only state to durable local storage [IndexedDB, SQLite via Capacitor, WatermelonDB, or RxDB]. Structuring the app so that every read and write happens against the local database first, guaranteeing instant UI response times).
+      - Secondary focus (~30%): Sync Resiliency & Conflict Resolution (Implementing Optimistic UI updates, background synchronization queues [Event Sourcing/Outbox Pattern], handling spotty 'lie-fi' connections gracefully, and implementing conflict resolution strategies [e.g., Last-Write-Wins or Conflict-Free Replicated Data Types (CRDTs)]).
+      - Tertiary focus (~20%): Asset Caching & Service Workers (Precaching critical application shells, standardizing cache strategies [Stale-While-Revalidate, Cache-First], handling offline binary/image uploads via background queues, and providing clear UI indicators of offline/sync status).
+
+      Include both immediate high-impact quick wins (e.g., implementing an optimistic UI update for a toggle switch, caching the main JS bundle) and bold, strategic leaps (e.g., ripping out traditional REST fetches in favor of a fully reactive local-first database like ElectricSQL or PowerSync).
+
+      Requirements:
+      1. Output the entire brainstorm directly into an `offline-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `LOC-01` for Local Persistence, `SYNC-01` for Sync/Conflicts, `SW-01` for Service Workers).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific data-loss risk, network loading spinner, or sync conflict does this address?
+         - **Proposed Solution:** Concrete local database implementation, sync queue pattern, or caching strategy.
+         - **Expected Impact:** Measurable reduction in perceived latency (TTFB), prevention of dropped mutations, or ability to function 100% offline.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to refactor this specific fetch call, implement the outbox pattern, or configure the service worker.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., mandating that all data mutations must write to local state before firing a network request [Optimistic UI], forbidding the rendering of full-page loading spinners for background data fetches, and requiring try/catch blocks that specifically handle navigator.onLine === false).
+      6. Conclude `offline-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly eliminate loading spinners.
+  # ---
+  # Name: ID153 - Self-Serve Support & UX Friction Deflection Audit
+  # Tags: Support Deflection, Friction Removal, Error Handling, UX Copy, Empty States, In-App Support, Sentry, Prioritization
+  # Use cases: Support ticket deflection, error boundary & message audit, empty state optimization, in-app self-serve help, bug reporting workflows
+  # Description: Acts as a Principal Product Support Architect and Friction Deflection Expert to eliminate user dead-ends across 3 lenses (50% actionable error states, 30% embedded help & AI deflection, 20% frictionless bug reporting), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysfriction"
+    replace: |
+      Act as a Principal Product Support Architect and Friction Deflection Expert. Review this codebase and its user-facing error/support touchpoints.
+
+      Brainstorm a high-leverage set of Self-Serve Support, UX Copy, and Friction Deflection improvements anchored in the 80/20 Pareto principle. The goal is to audit the app for 'dead ends' and propose strategic initiatives that keep users in the flow, anticipate their confusion, and empower them to resolve their own errors instantly without ever needing to contact support.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Actionable Error States & Contextual Deflection (Eradicating generic 'Something went wrong' messages. Implementing highly specific, actionable error copy, inline validation, smart tooltips, and contextual 'Empty States' that guide the user on exactly what to do next).
+      - Secondary focus (~30%): Embedded Help & AI Deflection (Integrating contextual FAQs right where users get stuck, AI-driven semantic search for documentation, in-app product tours that can be re-triggered, and AI chatbots that execute fixes rather than just linking to articles).
+      - Tertiary focus (~20%): Frictionless Bug Reporting & Feedback (Implementing 1-click bug reporting flows that automatically capture console logs, local state, and environment details [e.g., Sentry/LogRocket integration], reducing the back-and-forth debugging loop with users).
+
+      Include both immediate high-impact quick wins (e.g., rewriting form validation errors to be instructive rather than punitive) and bold, strategic leaps (e.g., embedding an LLM-powered support agent that has read-access to the user's current session state to diagnose issues).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `friction-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `ERR-01` for Error States, `HELP-01` for Embedded Support, `BUG-01` for Telemetry/Reporting).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific user dead-end, confusing UX pattern, or high-volume support ticket does this address?
+         - **Proposed Solution:** Concrete UI change, error boundary refactor, or support tooling integration.
+         - **Expected Impact:** Measurable reduction in support tickets, decreased drop-off rates on complex flows, or faster bug resolution.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to rewrite this error state, implement this tooltip component, or wire up this bug-catcher.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., absolutely forbidding generic error throws like throw new Error('Failed') in favor of typed, user-facing error objects with a resolutionSteps property; mandating that all complex form inputs include a contextual help tooltip).
+      6. Conclude `friction-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly deflect common support issues.
