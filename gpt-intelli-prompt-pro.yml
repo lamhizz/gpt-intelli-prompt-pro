@@ -1401,31 +1401,32 @@ matches:
       6. Security, Auth & Hygiene (Input sanitization, route guards, token lifecycle, CSP/CORS, rate limiting, dependency auditing).
       7. Observability, Telemetry & DX (Structured logging, error tracking breadcrumbs, funnel analytics instrumentation, build/dev tooling speed).
 
-      Output Requirements for `improvement-ideas.md`:
+      Output Requirements for `codebase-ideas-backlog.md`:
       Structure the document into 3–5 overarching themes (e.g., "Runtime Resilience & Latency", "State & Data Architecture", "Core Ergonomics & Conversion").
 
-      For each idea within a theme, use this schema:
+      For each idea within a theme, use this exact schema:
       ### [THEME_CODE-001] Idea Title
+      - **In Simple Terms:** A 1-2 sentence explanation of the problem and the fix, written entirely without jargon so a non-technical stakeholder or product manager can instantly understand the real-world benefit.
       - **Target Area:** Specific files, components, hooks, or configurations.
-      - **Problem / Opportunity:** Concrete evidence from the current implementation and why it matters.
+      - **Problem / Opportunity:** Concrete evidence from the current implementation and why it matters technically.
       - **Proposed Solution:** Actionable technical plan (patterns, refactors, libraries, or architectural changes).
       - **Trade-offs & Risks:** Edge cases, bundle/memory impacts, breaking changes, or migration overhead.
       - **Impact vs. Effort:** Rank both as Low / Medium / High.
 
-      Final Section in `improvement-ideas.md`:
+      Final Section in `codebase-ideas-backlog.md`:
       Include an **Executive Prioritization Matrix** (Markdown table: `ID | Title | Theme | Impact | Effort | Category`), classifying each item as:
       - **Quick Win:** High Impact, Low Effort
       - **Strategic Bet:** High Impact, High Effort
       - **Low-Hanging Fruit:** Low Impact, Low Effort
       - **Deprioritize:** Low Impact, High Effort
 
-      Highlight the top 3 recommended items to tackle in the next sprint.
+      Highlight the top 3 recommended items to tackle in the next sprint. For each of these top 3 actions, include a brief "In Simple Terms" summary, a "Why First/Second/Third" justification, and the "Expected Outcome."
 
   # ---
   # Name: ID134 - 80/20 Pareto Product Ideation
   # Tags: Product Strategy, Pareto Principle, 80/20, UX/UI, Prioritization, Ideation
   # Use cases: Product feature brainstorming, backlog generation, 80/20 improvement planning, UX & utilization audit
-  # Description: Acts as a Senior Product Lead to review an app and brainstorm high-leverage 80/20 improvement ideas across UX (70%), Business (15%), and Engineering (15%), ending with a visual ASCII Pareto 2x2 prioritization matrix graph in ideas-backlog.md.
+  # Description: Acts as a Senior Product Lead to review an app and brainstorm high-leverage 80/20 improvement ideas across UX (70%), Business (15%), and Engineering (15%), ending with a visual ASCII Pareto 2x2 prioritization matrix graph in product-ideas-backlog.md.
   - trigger: ":gideate"
     replace: |
       Act as a Senior Product Lead. Review [insert app name and 1-sentence description of what it does].
@@ -1440,7 +1441,7 @@ matches:
       Include both immediate high-impact quick wins and bold, innovative leaps that expand the product's core utility.
 
       Requirements:
-      1. Output the entire brainstorm directly into an `ideas-backlog.md` file using clean Markdown.
+      1. Output the entire brainstorm directly into a `product-ideas-backlog.md` file using clean Markdown.
       2. Group ideas by overarching theme.
       3. Assign each idea a unique ID prefixed by its theme (e.g., `UX-01`, `FEAT-01`, `BIZ-01`, `TECH-01`).
       4. Format each idea concisely:
@@ -1449,7 +1450,7 @@ matches:
          - **Proposed Solution:** Concrete feature, interaction, or architectural change.
          - **Expected Impact & Value:** The measurable payoff or utility gain.
          - **Impact / Effort:** (e.g., High Impact / Low Effort — highlight standout 80/20 quick wins).
-      5. Conclude `ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+      5. Conclude `product-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
          - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
          - Plot every generated idea ID and short title into its corresponding quadrant:
            * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
@@ -1457,3 +1458,580 @@ matches:
            * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
            * Bottom-Right: Low Impact / High Effort (Deprioritize)
          - Explicitly highlight the top standout 80/20 quick wins to execute first.
+
+  # ---
+  # Name: ID135 - 80/20 UX Copywriting & Conversion Ideation
+  # Tags: UX Writing, Copywriting, Conversion, AIDA, Microcopy, Onboarding, Prioritization
+  # Use cases: UX copy audits, conversion rate optimization, microcopy improvement, onboarding narrative refinement
+  # Description: Acts as a Senior UX Copywriter and Conversion Strategist to audit and brainstorm 80/20 messaging improvements across UX writing (60%), conversion (30%), and tone (10%), ending with a visual ASCII Pareto 2x2 prioritization matrix graph in ux-copy-ideas-backlog.md.
+  - trigger: ":guxcopy"
+    replace: |
+      Act as a Senior UX Copywriter and Conversion Strategist. Review [insert app name and 1-sentence description of what it does].
+
+      Brainstorm a high-leverage set of copywriting, messaging, and content strategy improvement ideas anchored in the 80/20 Pareto principle (focusing on the 20% of copy changes that drive 80% of clarity, conversion, and user delight).
+
+      Core Lens Distribution:
+      - Primary focus (~60%): UX Writing & Onboarding (clarity, making things obvious for a variety of users, reducing cognitive friction, intuitive microcopy, error states, and seamless user guidance).
+      - Secondary focus (~30%): Marketing & Conversion Copy (applying the AIDA framework—Attention, Interest, Desire, Action—to optimize CTAs, value propositions, landing page flow, and user activation).
+      - Tertiary focus (~10%): Voice, Tone & Trust (brand consistency, emotional resonance, empathy, perceived security, and reducing user anxiety).
+
+      Include both immediate high-impact quick wins (e.g., CTA tweaks, headline rewrites, fixing confusing microcopy) and bold, strategic leaps (e.g., complete onboarding narrative shifts).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `ux-copy-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `UXC-01` for UX Copy, `CONV-01` for Conversion, `ONB-01` for Onboarding, `TONE-01` for Voice/Tone).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **Problem / Opportunity:** What cognitive friction, confusion, or lack of desire does this current/missing copy cause?
+         - **Proposed Copy Solution:** Concrete rewrite, messaging shift, or content strategy change (provide before/after examples if applicable).
+         - **Expected Impact & Value:** The measurable payoff in clarity, conversion lift, or user delight.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort — highlight standout 80/20 quick wins).
+      5. Conclude `ux-copy-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID and short title into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins - e.g., microcopy/CTA tweaks)
+           * Top-Right: High Impact / High Effort (Strategic Bets - e.g., full onboarding rewrite)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top standout 80/20 quick wins to execute first.
+
+  # ---
+  # Name: ID136 - 80/20 UX/UI & Cognitive Ergonomics Audit
+  # Tags: UX/UI, Cognitive Ergonomics, Interaction Design, Gestalt, Fitts's Law, Micro-delight, Prioritization
+  # Use cases: UX/UI design audits, cognitive friction reduction, interaction pattern optimization, design polish & delight
+  # Description: Acts as a Senior Principal UX/UI Designer and Cognitive Ergonomics Expert to brainstorm 80/20 improvements across cognitive psychology (60%), interaction patterns (25%), and micro-delight (15%), ending with a visual ASCII Pareto 2x2 prioritization matrix graph in ux-ideas-backlog.md.
+  - trigger: ":guxui"
+    replace: |
+      Act as a Senior Principal UX/UI Designer and Cognitive Ergonomics Expert. Review [insert app name and 1-sentence description of what it does].
+
+      Brainstorm a high-leverage set of design and interaction improvements anchored in the 80/20 Pareto principle (focusing on the 20% of UI/UX changes that drive 80% of usability, task success, and user delight).
+
+      Core Lens Distribution:
+      - Primary focus (~60%): Cognitive Psychology & Friction Removal (closing the Gulf of Execution/Evaluation, applying Jakob's Law, Hick-Hyman Law, Miller’s Law, and reducing extraneous cognitive load; bridging the Implementation vs. Mental Model gap).
+      - Secondary focus (~25%): Structural UI & Interaction Patterns (Progressive disclosure, smart defaults, inline validation, Fitts's Law optimizations, clear signifiers/affordances, and Gestalt principles like Proximity and Common Region).
+      - Tertiary focus (~15%): Enlightenment & Micro-delight (Subtle state transitions, sensory feedback loops, physics-based micro-animations, and nuanced visual polish that elevates perceived quality).
+
+      Include both immediate high-impact quick wins (e.g., fixing layout proximity, adding smart defaults) and bold, strategic leaps (e.g., completely rethinking a core workflow's conceptual model).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `ux-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `COG-01` for Cognitive Load/Psychology, `INT-01` for Interaction Patterns, `UI-01` for Gestalt/Visual Layout, `DEL-01` for Delight/Animation).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **UX Principle / Cognitive Law Applied:** (e.g., Jakob's Law, Progressive Disclosure, Fitts's Law).
+         - **Problem / Opportunity:** What friction, mental model mismatch, or missed opportunity for delight does this address?
+         - **Proposed Solution:** Concrete UI change, interaction pattern, layout shift, or micro-animation.
+         - **Expected Impact & Value:** The measurable payoff in task completion speed, error reduction, or premium feel.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort — highlight standout 80/20 quick wins).
+      5. Conclude `ux-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID and short title into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins - e.g., spacing fixes, default states)
+           * Top-Right: High Impact / High Effort (Strategic Bets - e.g., complex animation systems, complete flow redesigns)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top standout 80/20 quick wins to execute first.
+
+  # ---
+  # Name: ID137 - AI-Native Architecture & DevEx Optimization
+  # Tags: Architecture, DevEx, AI Coding Agents, Refactoring, Scalability, Cursor Rules, Prioritization
+  # Use cases: Codebase refactoring for AI agents, context window optimization, architectural health check, DevEx guardrail creation
+  # Description: Acts as a Principal Systems Architect and AI-Native DevEx Expert to optimize codebase scalability and context density for AI agents across 3 lenses (50% AI agent optimization, 30% system scalability, 20% guardrails), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysarchitect"
+    replace: |
+      Act as a Principal Systems Architect and AI-Native DevEx (Developer Experience) Expert. Review [insert app name, tech stack, and 1-sentence description].
+
+      (Optional: Paste your repository folder structure or a tree output here).
+
+      Brainstorm a high-leverage set of architectural and codebase improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic refactoring initiatives that scale the application while heavily optimizing the codebase for AI coding agents (minimizing token usage, preventing LLM hallucinations, isolating context windows, and allowing agents to iterate safely).
+
+      Core Lens Distribution:
+      - Primary focus (~50%): AI-Agent Optimization & Context Density (Feature-Sliced Design, co-locating tests/types, eliminating 'god files' and circular dependencies, enforcing strict typing, and creating RAG-friendly code documentation).
+      - Secondary focus (~30%): System Scalability & Robustness (Decoupling business logic from UI frameworks, state management predictability, pure functions that are easily testable by AI, and modular boundaries).
+      - Tertiary focus (~20%): Maintainability & Guardrails (Automated test harnesses so AI can verify its own work without human intervention, linting guardrails, and eliminating architectural debt).
+
+      Include both immediate high-impact quick wins (e.g., file splitting, type extraction) and bold, strategic leaps (e.g., migrating to domain-driven micro-architecture).
+
+      Requirements:
+      1. Output the entire brainstorm directly into an `architecture-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `AIDEV-01`, `ARCH-01`, `SCALE-01`, `GUARD-01`).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What scalability bottleneck or AI-agent friction (e.g., blown context windows, lost imports) does this address?
+         - **Proposed Solution:** Concrete refactoring goal or modularization strategy.
+         - **Expected Impact:** System performance gain and/or AI token reduction.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to execute this specific refactor.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., file naming, preferred patterns, strict boundaries).
+      6. Conclude `architecture-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first.
+
+  # ---
+  # Name: ID138 - App Store Compliance & Security Architecture Audit
+  # Tags: Security, App Store Compliance, Privacy, OWASP, CSP, Permissions, GDPR, Prioritization
+  # Use cases: App store review preparation, vulnerability mitigation, privacy compliance audit, security hardening
+  # Description: Acts as a Principal Security Architect and App Store Compliance Specialist to harden apps and ensure review approval across 3 lenses (50% store compliance, 30% app security, 20% privacy & trust), concluding with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsyssecurity"
+    replace: |
+      Act as a Principal Security Architect and App Store Compliance Specialist. Review [insert app name, tech stack, target platforms (e.g., iOS App Store, Chrome Web Store), and a 1-sentence description].
+
+      Brainstorm a high-leverage set of security, privacy, and store-compliance improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that prevent automated or manual store rejections, harden the app against common vulnerabilities, and build deep user trust without over-engineering.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Store Compliance & Review Readiness (Apple App Store Guidelines, Google Play Data Safety, Chrome Web Store Manifest V3 requirements, strict permission minimization, transparent data usage, and handling edge cases like offline states or account deletion).
+      - Secondary focus (~30%): Application Security & Vulnerability Mitigation (OWASP Top 10, Content Security Policies (CSP), secure authentication protocols, sanitizing user inputs to prevent XSS/injection, and secure storage of sensitive tokens).
+      - Tertiary focus (~20%): Privacy & User Trust (GDPR/CCPA data handling basics, local-first storage architecture, explicit consent flows, anonymization, and clear privacy policy alignment).
+
+      Include both immediate high-impact quick wins (e.g., stripping unused permissions, fixing CSP headers) and bold, strategic leaps (e.g., moving to a zero-knowledge local encryption model).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `security-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `COMP-01` for Compliance, `SEC-01` for Security, `PRIV-01` for Privacy/Trust).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific App Store rejection risk, privacy violation, or security vulnerability does this address?
+         - **Proposed Solution:** Concrete technical fix, architecture change, or UI disclosure flow.
+         - **Expected Impact:** Prevention of store rejection, mitigation of specific attacks, or increased user trust.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to execute this specific fix or generate the required compliance boilerplate.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., never hardcoding secrets, always sanitizing inputs, enforcing strict Content Security Policies, minimizing requested permissions).
+      6. Conclude `security-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to ensure baseline store approval and security.
+
+  # ---
+  # Name: ID139 - Core Web Vitals & Runtime Performance Optimization
+  # Tags: Performance, Core Web Vitals, CWV, LCP, INP, CLS, Bundle Optimization, Web Workers, Prioritization
+  # Use cases: Web performance audits, Core Web Vitals tuning, bundle size reduction, memory leak & battery optimization
+  # Description: Acts as a Principal Performance Engineer and Core Web Vitals Expert to optimize rendering (50%), network/payload (30%), and resource efficiency (20%), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysperformance"
+    replace: |
+      Act as a Principal Performance Engineer and Core Web Vitals Expert. Review [insert app name, tech stack, and 1-sentence description].
+
+      (Optional: Paste your Webpack/Vite bundle analyzer output, Lighthouse scores, or specific performance complaints here).
+
+      Brainstorm a high-leverage set of web and app performance optimizations anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that drastically reduce load times, eliminate UI stutter, shrink bundle sizes, and minimize battery/memory consumption on user devices.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Rendering & Core Web Vitals (Optimizing Largest Contentful Paint [LCP], Cumulative Layout Shift [CLS], and Interaction to Next Paint [INP]. Minimizing main-thread blocking, eliminating unnecessary framework re-renders, and ensuring silky-smooth 60fps UI interactions).
+      - Secondary focus (~30%): Network, Payload & Asset Delivery (Aggressive tree-shaking, route-level code splitting, lazy loading non-critical components, edge caching, serving next-gen image formats, and compressing API JSON payloads).
+      - Tertiary focus (~20%): Resource Efficiency & Device Health (Preventing memory leaks, minimizing battery drain, throttling background syncs, optimizing garbage collection, and moving heavy computations to Web Workers).
+
+      Include both immediate high-impact quick wins (e.g., adding loading="lazy" to below-the-fold images, dynamic imports) and bold, strategic leaps (e.g., swapping a heavy library for a lightweight alternative, implementing a custom Web Worker architecture).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `performance-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `CWV-01` for Core Web Vitals, `NET-01` for Network/Payload, `REND-01` for Rendering, `RES-01` for Resource/Battery).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific performance bottleneck, Lighthouse penalty, or resource drain does this address?
+         - **Proposed Solution:** Concrete technical fix, architectural shift, or caching strategy.
+         - **Expected Impact:** Measurable improvements in ms (milliseconds), bundle size (KB/MB), or frame rates.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to execute this specific optimization.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., enforcing named imports for tree-shaking, mandating memoization for heavy components, forbidding the addition of large dependencies like Lodash or Moment.js without explicit permission).
+      6. Conclude `performance-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first for an immediate speed boost.
+
+  # ---
+  # Name: ID140 - Accessibility (a11y) & WCAG Compliance Audit
+  # Tags: Accessibility, a11y, WCAG, Screen Readers, Keyboard Navigation, ARIA, Inclusive Design, Prioritization
+  # Use cases: Accessibility audits, WCAG compliance reviews, screen reader testing prep, inclusive UX optimization
+  # Description: Acts as a Principal Accessibility Engineer and Inclusive Design Expert to audit WCAG compliance across 3 lenses (50% screen reader/keyboard, 30% visual/cognitive, 20% compliance & interactivity), concluding with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysaccess"
+    replace: |
+      Act as a Principal Accessibility (a11y) Engineer and Inclusive Design Expert. Review [insert app name, tech stack, and 1-sentence description].
+
+      (Optional: Paste your current accessibility audit results, Lighthouse a11y scores, or known compliance gaps here).
+
+      Brainstorm a high-leverage set of accessibility and inclusive design improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that achieve WCAG compliance, empower users with disabilities (visual, motor, auditory, and cognitive), and ensure the app is legally compliant and morally inclusive.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Screen Reader & Keyboard Navigation (Semantic HTML, strategic ARIA roles, logical DOM ordering, focus trapping/management, skip links, and ensuring 100% of interactive elements are reachable and usable via keyboard).
+      - Secondary focus (~30%): Visual & Cognitive Accessibility (Meeting WCAG AA/AAA color contrast ratios, supporting scalable typography/zoom up to 200%, accommodating 'prefers-reduced-motion', and providing clear, non-color-reliant error states and instructions).
+      - Tertiary focus (~20%): Compliance & Inclusive Interactivity (Optimizing touch target sizes [Fitts's Law for mobile], providing robust alt-text strategies, transcribing/captioning media, and ensuring complex widgets [modals, dropdowns, tabs] follow WAI-ARIA authoring practices).
+
+      Include both immediate high-impact quick wins (e.g., adding aria-labels, fixing contrast, setting explicit focus states) and bold, strategic leaps (e.g., completely auditing and rebuilding the core navigation for headless screen-reader compatibility).
+
+      Requirements:
+      1. Output the entire brainstorm directly into an `accessibility-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `NAV-01` for Keyboard Navigation, `SR-01` for Screen Readers, `VIS-01` for Visual/Contrast, `COG-01` for Cognitive/UX).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific barrier to entry, WCAG violation, or navigational friction does this address?
+         - **Proposed Solution:** Concrete technical fix, semantic HTML shift, or ARIA attribute addition.
+         - **Expected Impact:** WCAG level achieved (A/AA/AAA), screen reader compatibility, or usability gain.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to execute this specific a11y fix.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., forbidding `<div>` or `<span>` for interactive elements, mandating alt attributes on all images, enforcing strict focus outlines, and prohibiting tabindex values greater than 0).
+      6. Conclude `accessibility-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to immediately improve the baseline accessibility score.
+
+  # ---
+  # Name: ID141 - Automated Testing & CI/CD Pipeline Audit
+  # Tags: QA, Testing, CI/CD, DevOps, E2E, Playwright, TDD, Automation, Prioritization
+  # Use cases: Automated test strategy, CI/CD workflow optimization, TDD adoption for AI agents, regression risk reduction
+  # Description: Acts as a Principal QA Architect and DevOps Automation Expert to audit test suites across 3 lenses (50% high-ROI automated testing, 30% CI/CD pipelines, 20% AI-assisted TDD & guardrails), concluding with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysqa"
+    replace: |
+      Act as a Principal QA Architect and DevOps Automation Expert. Review [insert app name, tech stack, current testing frameworks (if any), and a 1-sentence description].
+
+      (Optional: Paste your current test coverage report, CI/CD workflow YAML, or a list of frequent production bugs here).
+
+      Brainstorm a high-leverage set of automated testing, QA, and pipeline improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eliminate manual regression testing, catch bugs before they merge, accelerate deployment velocity, and make it effortless for AI agents to write and verify their own tests.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): High-ROI Automated Testing (Implementing a 'Testing Trophy' strategy: heavy on fast unit/integration tests for business logic, and critical-path End-to-End (E2E) tests using Playwright/Cypress for core user journeys. Focus on mocking, stubbing, and testing behaviors over implementation details).
+      - Secondary focus (~30%): CI/CD & Pipeline Automation (GitHub Actions / GitLab CI workflows, automated PR checks, deployment protection rules, parallel test execution, and fast feedback loops to keep developer velocity high).
+      - Tertiary focus (~20%): AI-Assisted TDD & QA Guardrails (Visual regression testing, configuring code coverage thresholds, pre-commit hooks, and structuring the codebase so AI coding agents can seamlessly adopt Test-Driven Development).
+
+      Include both immediate high-impact quick wins (e.g., setting up a baseline CI linter, adding a single E2E test for the login flow) and bold, strategic leaps (e.g., implementing contract testing for microservices, full visual regression pipelines).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `qa-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `UNIT-01` for Unit/Integration, `E2E-01` for End-to-End, `CI-01` for Pipelines, `QA-01` for Developer Experience/Hooks).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific regression risk, manual QA bottleneck, or deployment fear does this address?
+         - **Proposed Solution:** Concrete testing framework implementation, CI/CD step, or TDD strategy.
+         - **Expected Impact:** Reduction in bug rates, faster deployment times, or increased developer confidence.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to execute this specific test suite or CI workflow.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., mandating that every new feature PR must include passing unit tests, enforcing 'Arrange-Act-Assert' test structures, forbidding tests that rely on external live databases).
+      6. Conclude `qa-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to establish a baseline safety net.
+
+  # ---
+  # Name: ID142 - Technical SEO & Semantic Discoverability Audit
+  # Tags: SEO, Technical SEO, JSON-LD, Schema Markup, SERP, Indexing, Sitemaps, Growth Engineering, Prioritization
+  # Use cases: Technical SEO audits, schema markup implementation, SSR/SSG discoverability optimization, organic search growth
+  # Description: Acts as a Principal Technical SEO Architect and Growth Engineering Expert to optimize organic discoverability across 3 lenses (50% crawlability/indexing, 30% structured data & schema, 20% on-page automation & taxonomy), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysseo"
+    replace: |
+      Act as a Principal Technical SEO Architect and Growth Engineering Expert. Review [insert app/website name, frontend tech stack (e.g., Next.js, WordPress, Astro), and a 1-sentence description].
+
+      (Optional: Paste your Lighthouse SEO scores, Google Search Console coverage errors, current robots.txt, or URL structure here).
+
+      Brainstorm a high-leverage set of technical SEO and organic discoverability improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eliminate crawl bottlenecks, maximize SERP real estate through rich snippets, and ensure your content architecture sends crystal-clear relevance signals to search engine algorithms.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Crawlability, Indexing & Architecture (Server-Side Rendering [SSR] / Static Site Generation [SSG] strategies, dynamic XML sitemaps, robots.txt optimization, canonical tag enforcement, solving pagination traps, and managing crawl budget).
+      - Secondary focus (~30%): Structured Data & Semantic Web (JSON-LD schema markup for products/articles/breadcrumbs, rich snippet qualification, Open Graph/Twitter metadata for social sharing, and flawless semantic HTML).
+      - Tertiary focus (~20%): On-Page Automation & URL Taxonomy (Dynamic meta tag generation, hierarchical URL routing, automated H1-H6 outline validation, and programmatic internal linking structures).
+
+      Include both immediate high-impact quick wins (e.g., fixing broken canonicals, adding basic Organization JSON-LD) and bold, strategic leaps (e.g., migrating a client-side rendered SPA to a server-side rendered edge infrastructure, programmatic SEO landing page generation).
+
+      Requirements:
+      1. Output the entire brainstorm directly into an `seo-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `CRAWL-01` for Crawlability/Indexation, `SCHEMA-01` for Structured Data, `ONPG-01` for On-Page/Tags).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific indexing failure, missed SERP feature, or ranking friction does this address?
+         - **Proposed Solution:** Concrete technical fix, rendering shift, or schema implementation.
+         - **Expected Impact:** Increase in organic impressions, rich snippet eligibility, or faster indexation times.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to generate this specific schema, meta-component, or routing logic.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., forbidding client-side rendering for public content, mandating dynamic `<title>` and `<meta name="description">` tags on every new route, enforcing that all `<a>` tags must have valid href attributes rather than JavaScript onClick events).
+      6. Conclude `seo-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to secure immediate organic traffic lifts.
+
+  # ---
+  # Name: ID143 - Database Architecture & Query Optimization Audit
+  # Tags: Database, SQL, PostgreSQL, Prisma, ORM, Indexing, Query Optimization, Caching, Migrations, Prioritization
+  # Use cases: Database architecture reviews, slow query optimization, schema indexing strategy, migration safety planning
+  # Description: Acts as a Principal Database Architect and Data Engineering Expert to optimize database performance across 3 lenses (50% schema design & data modeling, 30% query optimization & ORM, 20% scalability & migrations), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysdata"
+    replace: |
+      Act as a Principal Database Architect and Data Engineering Expert. Review [insert app name, primary database technology (e.g., PostgreSQL, MongoDB, Redis), ORM/Query builder, and a 1-sentence description].
+
+      (Optional: Paste your current schema schema.prisma / schema.sql, a list of slow query logs, or your Entity-Relationship assumptions here).
+
+      Brainstorm a high-leverage set of database architecture, schema design, and query optimization improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eliminate database bottlenecks, ensure strict data integrity, drastically reduce query latency, and structure the data layer so AI coding agents can generate safe, performant queries.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Schema Design & Data Modeling (Normalization vs. intentional denormalization, selecting optimal column data types, strategic indexing [B-Tree, GIN, GiST], strict database-level constraints/foreign keys, and properly structuring relational vs. JSONB data).
+      - Secondary focus (~30%): Query Optimization & ORM Performance (Eradicating N+1 query problems, optimizing JOIN strategies, leveraging materialized views for heavy aggregations, analyzing execution plans, and implementing intelligent caching layers).
+      - Tertiary focus (~20%): Scalability, Resilience & Migrations (Connection pooling, read replicas, partitioning large tables, safe schema migration workflows, transaction isolation levels, and preventing race conditions or deadlocks).
+
+      Include both immediate high-impact quick wins (e.g., adding missing foreign key indexes, fixing inefficient data types) and bold, strategic leaps (e.g., partitioning historical data, migrating heavy read operations to Elasticsearch or Redis).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `database-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `SCHEMA-01` for Data Modeling, `QUERY-01` for Query/ORM optimization, `SCALE-01` for Scalability, `CACHE-01` for Caching).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific slow query, data integrity risk, or scalability ceiling does this address?
+         - **Proposed Solution:** Concrete schema change, index addition, query rewrite, or caching strategy.
+         - **Expected Impact:** Measurable reduction in latency (ms), CPU/Memory utilization, or prevention of corrupt states.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to generate the exact SQL migration, ORM model update, or query refactor.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., mandating that all new foreign keys must include a companion index, forbidding destructive DROP migrations without explicit approval, enforcing strict ORM typing, and requiring transaction blocks for multi-table writes).
+      6. Conclude `database-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to secure immediate database performance gains.
+
+  # ---
+  # Name: ID144 - Backend Architecture & API Design Audit
+  # Tags: Backend, API Design, OpenAPI, Middleware, Architecture, Microservices, Zod, Prioritization
+  # Use cases: API design reviews, backend modularization, middleware hardening, contract-driven development
+  # Description: Acts as a Principal Backend Architect and API Design Expert to mature backend systems across 3 lenses (50% API contracts & DevEx, 30% middleware pipeline, 20% architectural topology), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysbackend"
+    replace: |
+      Act as a Principal Backend Architect and API Design Expert. Review [insert app name, backend framework (e.g., Node/Express, FastAPI, NestJS), API style (REST/GraphQL/tRPC), and a 1-sentence description].
+
+      (Optional: Paste your OpenAPI/Swagger spec, a sample controller/route file, or your current middleware stack here).
+
+      Brainstorm a high-leverage set of API design, backend architecture, and middleware improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that enforce strict data contracts, decouple complex logic, standardize error handling, and structure the backend so AI coding agents can reliably consume, extend, or generate typed clients for your API without hallucinating endpoints.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): API Contracts & Developer Experience (RESTful maturity, strict GraphQL schemas, request/response validation [e.g., Zod], idempotency, versioning strategies, and OpenAPI/Swagger documentation to ground AI agents).
+      - Secondary focus (~30%): Middleware & Request Pipeline (Centralized error handling, authentication/authorization guards, rate-limiting, request logging, CORS policies, and payload sanitization).
+      - Tertiary focus (~20%): Architectural Topology (Modular monolith boundaries vs. microservices, event-driven decoupling [Pub/Sub, message queues], Backend-for-Frontend (BFF) patterns, and separating business logic from transport layers).
+      - Include both immediate high-impact quick wins (e.g., standardizing a global JSON error payload, adding basic rate limits) and bold, strategic leaps (e.g., extracting a heavy background processing job into a separate event-driven worker, migrating to a fully typed tRPC monorepo).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `backend-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `API-01` for Design/Contracts, `MID-01` for Middleware, `ARCH-01` for Topology, `AUTH-01` for Security).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific API inconsistency, fragile middleware, or architectural bottleneck does this address?
+         - **Proposed Solution:** Concrete API design pattern, middleware implementation, or structural shift.
+         - **Expected Impact:** Measurable improvement in developer velocity, API predictability, or system resilience.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to generate this exact middleware, endpoint refactor, or OpenAPI spec.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., mandating strict Zod validation on all incoming DTOs, forbidding raw database errors from leaking to API responses, enforcing standard HTTP status codes, and requiring controllers to be completely decoupled from business logic services).
+      6. Conclude `backend-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly mature the backend.
+
+  # ---
+  # Name: ID145 - Cloud Infrastructure & DevSecOps Audit
+  # Tags: DevOps, DevSecOps, Cloud Infrastructure, Docker, Kubernetes, Terraform, CI/CD, FinOps, Prioritization
+  # Use cases: Cloud infrastructure audits, containerization optimization, DevSecOps pipeline hardening, cloud cost reduction (FinOps)
+  # Description: Acts as a Principal Cloud Architect and DevSecOps Expert to optimize cloud infrastructure and pipelines across 3 lenses (50% IaC & containerization, 30% DevSecOps & deployments, 20% observability & FinOps), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysdevops"
+    replace: |
+      Act as a Principal Cloud Architect and DevSecOps Expert. Review [insert app name, current cloud provider (e.g., AWS, GCP, Vercel), containerization state, and a 1-sentence description].
+
+      (Optional: Paste your Dockerfile, Terraform state summary, GitHub Actions deploy workflow, or a list of infrastructure pain points here).
+
+      Brainstorm a high-leverage set of Cloud Infrastructure, Containerization, DevSecOps, and CI/CD improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that guarantee zero-downtime deployments, harden cloud security, drastically reduce hosting costs, and define Infrastructure as Code (IaC) so perfectly that AI coding agents can spin up reproducible environments on demand.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Infrastructure as Code (IaC) & Containerization (Optimizing Dockerfiles for multi-stage builds and layer caching, Kubernetes [K8s] manifests, Helm charts, Terraform/OpenTofu modularity, and achieving 100% immutable infrastructure).
+      - Secondary focus (~30%): DevSecOps & Deployment Pipelines (Zero-downtime deployment strategies [Blue/Green, Canary], secret management [HashiCorp Vault, AWS Secrets Manager], automated image vulnerability scanning, and hardening IAM roles/least privilege).
+      - Tertiary focus (~20%): Observability, Auto-scaling & FinOps (Structured logging, Prometheus/Grafana telemetry, configuring aggressive auto-scaling thresholds, rightsizing compute resources, and eliminating idle cloud waste).
+
+      Include both immediate high-impact quick wins (e.g., pinning Docker base image hashes, stripping unused AWS permissions) and bold, strategic leaps (e.g., migrating from raw EC2 instances to a fully managed Kubernetes cluster or serverless architecture).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `devops-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `IAC-01` for Infra-as-Code, `DOCKER-01` for Containerization, `SEC-01` for DevSecOps, `OBS-01` for Observability).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific cloud vulnerability, pipeline bottleneck, or cost overrun does this address?
+         - **Proposed Solution:** Concrete Terraform refactor, Docker optimization, or pipeline step.
+         - **Expected Impact:** Measurable reduction in deployment time, monthly cloud spend ($), or security risk.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to generate this exact Terraform module, Dockerfile refactor, or IAM policy.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., absolutely forbidding hardcoded credentials in any file, mandating multi-stage Docker builds to keep production images under a specific MB limit, enforcing strict IAM least-privilege tagging on all IaC resources).
+      6. Conclude `devops-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly secure and optimize the infrastructure.
+
+  # ---
+  # Name: ID146 - Product Telemetry & Data Analytics Audit
+  # Tags: Analytics, Telemetry, Tracking Plan, PostHog, Segment, Mixpanel, BigQuery, CDP, Privacy, Prioritization
+  # Use cases: Analytics tracking audits, event taxonomy standardization, server-side tracking migration, CDP & data pipeline cleanup
+  # Description: Acts as a Principal Data Architect and Product Telemetry Expert to clean up and scale analytics across 3 lenses (50% event taxonomy & tracking, 30% data pipelines & architecture, 20% privacy, performance & observability), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysanalytics"
+    replace: |
+      Act as a Principal Data Architect and Product Telemetry Expert. Review [insert app name, current analytics stack (e.g., PostHog, Segment, Mixpanel, BigQuery, dbt), and a 1-sentence description].
+
+      (Optional: Paste your current event tracking plan, tracking schema/JSON, or a list of your most critical KPIs here).
+
+      Brainstorm a high-leverage set of data analytics, telemetry, and observability improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eliminate 'junk data,' establish a pristine event taxonomy, ensure reliable data pipelines, and structure tracking code so AI agents can automatically instrument new features without violating your data model.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Event Taxonomy & Tracking Strategy (Enforcing strict 'Object + Action' naming conventions [e.g., Checkout Completed], defining core activation/retention funnels, pruning unused/vanity metrics, and standardizing global event properties).
+      - Secondary focus (~30%): Data Pipelines & Analytics Architecture (Transitioning from fragile client-side tracking to robust server-side tracking, identity resolution across devices, Customer Data Platform [CDP] routing, and ELT/ETL workflow optimization).
+      - Tertiary focus (~20%): Privacy, Performance & Observability (Anonymizing PII for GDPR/CCPA compliance, reducing client-side SDK bloat to improve Core Web Vitals, mitigating ad-blocker data loss, and setting up anomaly detection for metric drops).
+
+      Include both immediate high-impact quick wins (e.g., auditing and deleting duplicate events, moving a heavy tracking script to a Web Worker) and bold, strategic leaps (e.g., migrating to a first-party server-side tracking infrastructure or implementing a predictive churn model).
+
+      Requirements:
+      1. Output the entire brainstorm directly into an `analytics-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `TAX-01` for Taxonomy, `PIPE-01` for Pipelines, `PRIV-01` for Privacy/Compliance, `OBS-01` for Observability).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific data blind spot, dirty data issue, or pipeline fragility does this address?
+         - **Proposed Solution:** Concrete tracking plan update, pipeline architectural shift, or code-level instrumentation pattern.
+         - **Expected Impact:** Measurable improvement in data accuracy, decision-making speed, or pipeline cost efficiency.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to generate this exact tracking wrapper, data model, or server-side event dispatcher.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., strictly enforcing the [Noun] [Past Tense Verb] event naming convention, absolutely forbidding the inclusion of plain-text PII in event payloads, and mandating that all UI-driven analytics fire asynchronously).
+      6. Conclude `analytics-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly clean up your data ecosystem.
+
+  # ---
+  # Name: ID147 - AI Systems, RAG & LLM Architecture Audit
+  # Tags: AI Architecture, LLM, RAG, Prompt Engineering, Agentic Workflows, LLMOps, Prioritization
+  # Use cases: AI systems audit, RAG & vector search optimization, prompt engineering, agentic tool-calling architecture, token cost & latency reduction
+  # Description: Acts as a Principal AI Engineer and LLM Architect to optimize AI integrations across 3 lenses (50% RAG & context architecture, 30% prompt engineering & agentic workflows, 20% LLM ops, cost & safety), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysagent"
+    replace: |
+      Act as a Principal AI Engineer and LLM Architect. Review [insert app name, current AI stack (e.g., OpenAI API, LangChain, Pinecone, local models), and a 1-sentence description].
+
+      (Optional: Paste your current system prompts, RAG chunking logic, tool calling schemas, or specific AI latency/cost complaints here).
+
+      Brainstorm a high-leverage set of AI integration, RAG (Retrieval-Augmented Generation), and prompt engineering improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eliminate LLM hallucinations, reduce token latency and costs, structure agentic tool-calling reliably, and ensure your AI architecture is modular enough to swap models seamlessly.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): RAG & Context Architecture (Optimizing vector embeddings, implementing hybrid search [semantic + keyword], semantic chunking strategies, dynamic context window management, and reranking to ensure highest-relevance data grounding).
+      - Secondary focus (~30%): Prompt Engineering & Agentic Workflows (Refining system instructions, standardizing structured outputs [e.g., JSON schema/Zod validation], multi-agent orchestration, and deterministic tool/function calling).
+      - Tertiary focus (~20%): LLM Ops, Cost & Safety (Implementing semantic caching to reduce redundant API calls, token cost optimization, UI streaming for perceived latency reduction, prompt injection defenses, and dynamic model routing).
+
+      Include both immediate high-impact quick wins (e.g., adding streaming responses, refining a system prompt for fewer hallucinations) and bold, strategic leaps (e.g., migrating from a massive commercial model to a fine-tuned, local-first small language model [SLM] for specific tasks).
+
+      Requirements:
+      1. Output the entire brainstorm directly into an `ai-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `RAG-01` for Context/Retrieval, `PRMPT-01` for Prompting, `AGENT-01` for Tool Calling, `OPS-01` for Cost/Latency).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific hallucination, latency bottleneck, or context-loss issue does this address?
+         - **Proposed Solution:** Concrete RAG strategy, prompt technique, or architectural shift.
+         - **Expected Impact:** Measurable reduction in token costs, latency (Time to First Token), or increase in output accuracy.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to generate this exact tool schema, chunking utility, or system prompt refactor.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., mandating that all LLM outputs be strictly validated via Zod schemas, forbidding the hardcoding of prompt strings inside UI components, enforcing streaming by default for all user-facing AI routes).
+      6. Conclude `ai-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly improve AI reliability and UX.
+
+  # ---
+  # Name: ID148 - Design System & Visual Engineering Optimization
+  # Tags: Design Systems, Visual Design, Design Tokens, UI/UX, Component Library, Apple Design, Prioritization
+  # Use cases: Design system audits, design token consolidation, visual polish & consistency, atomic component refactoring, UI cleanup
+  # Description: Acts as a Principal Design Systems Architect and 'Apple-Tier' Visual Engineer to unify rapid prototypes into a premium UI framework across 3 lenses (50% design tokens, 30% premium aesthetics, 20% spatial rhythm), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysvisual"
+    replace: |
+      Act as a Principal Design Systems Architect and 'Apple-Tier' Visual Engineer. Review [insert app name, frontend framework/styling solution (e.g., React/Tailwind, SwiftUI), and a 1-sentence description].
+
+      (Optional: Paste a list of your core screens, a description of your current UI components, or a screenshot/Figma link here).
+
+      Brainstorm a high-leverage set of Design System and Visual Engineering improvements anchored in the 80/20 Pareto principle. The goal is to audit the chaotic byproduct of rapid prototyping—rogue layout patterns, inconsistent spacing, fragmented elements—and unify them into a harmonious, systematic, and premium UI framework. I want you to apply a ruthless, minimalist, holistic design mindset that elevates the app's completeness to world-class standards.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Design System & Token Consolidation (Auditing the codebase to extract hardcoded values and replace them with a strict, unified taxonomy of Design Tokens for typography scales, color primitives, spacing rhythms, and corner radii. Building an atomic component library).
+      - Secondary focus (~30%): Premium Aesthetic & Visual Harmony (Elevating the 'fit and finish'—sophisticated use of negative space, crisp typography hierarchy, subtle state transitions, frosted/translucent material effects, and eliminating all visual noise/clutter).
+      - Tertiary focus (~20%): Structural Patterns & Spatial Rhythm (Unifying screen-to-screen layout architectures, standardizing navigation scaffolding, and ensuring predictability and unity across the entire user journey).
+
+      Include both immediate high-impact quick wins (e.g., standardizing button padding, enforcing a strict 4pt/8pt spacing grid) and bold, strategic leaps (e.g., completely overhauling the typography system or migrating to a strict headless UI architecture with custom styling).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `visual-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `SYS-01` for Design Tokens/System, `AESTH-01` for Visual Polish, `LAY-01` for Layout/Structure).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific rapid-prototyping inconsistency, visual clash, or fragmented component does this address?
+         - **Proposed Solution:** Concrete design token implementation, component consolidation, or layout unification rule.
+         - **Expected Impact:** Measurable reduction in CSS/styling bloat, perceived quality lift, or developer velocity when building new screens.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to extract, refactor, or unify this specific component/style.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., absolutely forbidding hardcoded hex colors or pixel values in favor of design tokens [e.g., bg-surface-primary], mandating the reuse of core atomic components, and strictly enforcing an 8-point spatial grid).
+      6. Conclude `visual-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly harmonize the UI.
+
