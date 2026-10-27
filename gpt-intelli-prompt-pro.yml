@@ -1575,36 +1575,36 @@ matches:
          - Explicitly highlight the top 3 standout 80/20 quick wins to execute first.
 
   # ---
-  # Name: ID138 - App Store Compliance & Security Architecture Audit
-  # Tags: Security, App Store Compliance, Privacy, OWASP, CSP, Permissions, GDPR, Prioritization
-  # Use cases: App store review preparation, vulnerability mitigation, privacy compliance audit, security hardening
-  # Description: Acts as a Principal Security Architect and App Store Compliance Specialist to harden apps and ensure review approval across 3 lenses (50% store compliance, 30% app security, 20% privacy & trust), concluding with .cursorrules and an ASCII 2x2 prioritization matrix.
+  # Name: ID138 - Application Security (AppSec) & Defensive Engineering Audit
+  # Tags: Security, AppSec, OWASP, Penetration Testing, Cryptography, Auth, CSP, WAF, DevSecOps, Prioritization
+  # Use cases: Application security audits, OWASP Top 10 mitigation, auth & session hardening, proactive defensive guardrails, vulnerability scanning
+  # Description: Acts as a Principal Application Security Architect and Lead Penetration Tester to audit and harden web/app solutions across 3 lenses (50% vulnerability auditing & OWASP mitigation, 30% cryptography & auth hardening, 20% proactive precautions & DevSecOps), concluding with .cursorrules and an ASCII 2x2 prioritization matrix.
   - trigger: ":gsyssecurity"
     replace: |
-      Act as a Principal Security Architect and App Store Compliance Specialist. Review this codebase and application.
+      Act as a Principal Application Security Architect (AppSec) and Lead Penetration Tester. Review this codebase and its security posture.
 
-      Brainstorm a high-leverage set of security, privacy, and store-compliance improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that prevent automated or manual store rejections, harden the app against common vulnerabilities, and build deep user trust without over-engineering.
+      Brainstorm a high-leverage set of pure security audits and defensive implementations anchored in the 80/20 Pareto principle. The goal is to aggressively audit the application for vulnerabilities, propose strategic precautions, and harden the codebase so that user data is mathematically secure, APIs are impenetrable, and AI coding agents are forced to write safe code by default.
 
       Core Lens Distribution:
-      - Primary focus (~50%): Store Compliance & Review Readiness (Apple App Store Guidelines, Google Play Data Safety, Chrome Web Store Manifest V3 requirements, strict permission minimization, transparent data usage, and handling edge cases like offline states or account deletion).
-      - Secondary focus (~30%): Application Security & Vulnerability Mitigation (OWASP Top 10, Content Security Policies (CSP), secure authentication protocols, sanitizing user inputs to prevent XSS/injection, and secure storage of sensitive tokens).
-      - Tertiary focus (~20%): Privacy & User Trust (GDPR/CCPA data handling basics, local-first storage architecture, explicit consent flows, anonymization, and clear privacy policy alignment).
+      - Primary focus (~50%): Vulnerability Auditing & Threat Mitigation (Systematically hunting for OWASP Top 10 vulnerabilities: preventing Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), SQL/NoSQL Injection, Server-Side Request Forgery (SSRF), and closing broken access control/Insecure Direct Object Reference (IDOR) loopholes).
+      - Secondary focus (~30%): Cryptography, Auth & Session Hardening (Implementing Zero-Knowledge architecture principles, encrypting sensitive PII at rest and in transit, securing JWT/session token storage [e.g., using HttpOnly secure cookies over local storage], and rotating cryptographic keys securely).
+      - Tertiary focus (~20%): Proactive Precautions & DevSecOps Guardrails (Enforcing strict Content Security Policies (CSP), configuring Web Application Firewalls (WAF), implementing intelligent rate limiting/brute-force protections, and setting up automated dependency vulnerability scanning).
 
-      Include both immediate high-impact quick wins (e.g., stripping unused permissions, fixing CSP headers) and bold, strategic leaps (e.g., moving to a zero-knowledge local encryption model).
+      Include both immediate high-impact quick wins (e.g., rotating exposed secrets, adding basic helmet.js/security headers) and bold, strategic leaps (e.g., moving from standard passwords to WebAuthn/Passkeys, or implementing payload encryption).
 
       Requirements:
       1. Output the entire brainstorm directly into a `security-ideas-backlog.md` file using clean Markdown.
       2. Group ideas by overarching theme.
-      3. Assign each idea a unique ID prefixed by its theme (e.g., `COMP-01` for Compliance, `SEC-01` for Security, `PRIV-01` for Privacy/Trust).
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `VULN-01` for Vulnerabilities, `AUTH-01` for Authentication, `CRYPT-01` for Data Protection, `DEF-01` for Defensive Configs).
       4. Format each idea concisely:
          - **[ID] Title**
          - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
-         - **Problem / Opportunity:** What specific App Store rejection risk, privacy violation, or security vulnerability does this address?
-         - **Proposed Solution:** Concrete technical fix, architecture change, or UI disclosure flow.
-         - **Expected Impact:** Prevention of store rejection, mitigation of specific attacks, or increased user trust.
-         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to execute this specific fix or generate the required compliance boilerplate.
+         - **Problem / Opportunity:** What specific attack vector, data leak risk, or insecure default does this address?
+         - **Proposed Solution:** Concrete code change, architectural shift, or cryptographic implementation.
+         - **Expected Impact:** Prevention of specific breaches, measurable reduction in attack surface, or compliance with security standards.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to audit a specific file, generate a CSP header, or refactor an insecure function.
          - **Impact / Effort:** (e.g., High Impact / Low Effort).
-      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., never hardcoding secrets, always sanitizing inputs, enforcing strict Content Security Policies, minimizing requested permissions).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., absolutely forbidding the use of innerHTML or dangerouslySetInnerHTML without DOMPurify, mandating parameterized queries to block SQLi, and enforcing that all tokens must be stored in HttpOnly cookies rather than localStorage).
       6. Conclude `security-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
          - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
          - Plot every generated idea ID into its corresponding quadrant:
@@ -1612,7 +1612,7 @@ matches:
            * Top-Right: High Impact / High Effort (Strategic Bets)
            * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
            * Bottom-Right: Low Impact / High Effort (Deprioritize)
-         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to ensure baseline store approval and security.
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly close critical security gaps.
 
   # ---
   # Name: ID139 - Core Web Vitals & Runtime Performance Optimization
