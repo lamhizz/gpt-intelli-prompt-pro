@@ -2211,3 +2211,363 @@ matches:
            * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
            * Bottom-Right: Low Impact / High Effort (Deprioritize)
          - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly deflect common support issues.
+
+  # ---
+  # Name: ID154 - Redux Toolkit (RTK) & Global State Architecture Audit
+  # Tags: Redux, Redux Toolkit, RTK Query, State Management, React, Caching, Memoization, TypeScript, Prioritization
+  # Use cases: Redux Toolkit migration, RTK Query adoption, cache invalidation, selector memoization & re-render prevention, global store refactoring
+  # Description: Acts as a Principal Frontend Architect and Redux Toolkit (RTK) Expert to audit and modernize state management across 3 lenses (50% RTK Query & server state, 30% performance & store architecture, 20% TypeScript strictness & AI DevEx), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysredux"
+    replace: |
+      Act as a Principal Frontend Architect and Redux Toolkit (RTK) Expert. Review this codebase and its state management architecture.
+
+      Brainstorm a high-leverage set of state management, data fetching, and architectural improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eradicate legacy boilerplate, prevent unnecessary React re-renders, seamlessly manage server cache, and structure the global store so AI coding agents can accurately interact with your state without hallucinating payloads.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): RTK Query & Server State (Migrating away from manual `useEffect` fetching, `createAsyncThunk`, or Axios wrappers in favor of RTK Query. Implementing intelligent cache invalidation/tags, optimistic UI updates, and polling strategies).
+      - Secondary focus (~30%): Performance & Store Architecture (Normalizing relational data with `createEntityAdapter`, writing deeply memoized selectors using `createSelector` to prevent render cascades, and decoupling global state from transient UI state).
+      - Tertiary focus (~20%): TypeScript Strictness & AI DevEx (Enforcing strictly typed `useAppDispatch` and `useAppSelector` hooks, organizing code by Feature-Sliced Design [co-locating slices, APIs, and components], and making state mutations 100% predictable for LLMs).
+
+      Include both immediate high-impact quick wins (e.g., swapping a complex `useEffect` for an RTK Query endpoint) and bold, strategic leaps (e.g., completely migrating a legacy Redux/Saga architecture to modern RTK).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `redux-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `RTKQ-01` for Data Fetching, `MEMO-01` for Selectors/Performance, `STORE-01` for Architecture, `TS-01` for Typing).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific boilerplate, re-render issue, or caching bug does this address?
+         - **Proposed Solution:** Concrete RTK Query implementation, `createSlice` refactor, or selector optimization.
+         - **Expected Impact:** Measurable reduction in lines of code, improved frame rates (fewer re-renders), or perfect cache consistency.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to generate this exact RTK Query endpoint, entity adapter, or memoized selector.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., absolutely forbidding legacy Redux `CREATE_STORE` or manual `switch(action.type)` reducers, mandating the use of built-in Immer for mutations, and enforcing that all components use pre-typed `useAppSelector` instead of raw `useSelector`).
+      6. Conclude `redux-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly clean up your state management.
+
+  # ---
+  # Name: ID155 - WebAssembly (WASM) & High-Performance Compute Optimization
+  # Tags: WebAssembly, WASM, High Performance, Rust, Zig, C++, Web Workers, SharedArrayBuffer, Prioritization
+  # Use cases: WASM module integration, compute offloading, CPU bottleneck elimination, zero-copy memory bridging, binary size optimization
+  # Description: Acts as a Principal WebAssembly (WASM) Architect and High-Performance Compute Expert to offload heavy workloads across 3 lenses (50% compute offloading & CPU bottlenecks, 30% JS-WASM bridge & memory management, 20% toolchain & binary optimization), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsyswasm"
+    replace: |
+      Act as a Principal WebAssembly (WASM) Architect and High-Performance Compute Expert. Review this codebase and its compute-heavy bottlenecks.
+
+      Brainstorm a high-leverage set of WebAssembly integration, compute offloading, and memory management improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eradicate main-thread blocking, drastically speed up data-intensive operations (e.g., local SQLite, cryptography, image/audio processing), and structure the JS-to-WASM boundary so AI coding agents can safely write cross-language code without memory leaks.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Compute Offloading & CPU Bottlenecks (Identifying math-heavy, data-heavy, or synchronous blocking tasks currently in JS/TS and migrating them to highly optimized Zig or Rust WASM modules. Utilizing Web Workers in tandem with WASM to completely free the UI thread).
+      - Secondary focus (~30%): The JS-WASM Bridge & Memory Management (Minimizing serialization/deserialization overhead across the boundary. Leveraging SharedArrayBuffer for zero-copy memory access, passing pointers instead of massive JSON payloads, and ensuring strict linear memory cleanup to prevent leaks).
+      - Tertiary focus (~20%): Toolchain, Binary Optimization & DevEx (Shrinking .wasm payload sizes using tools like wasm-opt, stripping unused panics/debug symbols, orchestrating the build pipeline, and defining strict ABI [Application Binary Interface] contracts between JS and WASM).
+
+      Include both immediate high-impact quick wins (e.g., wrapping an existing heavy calculation in a simple WASM function) and bold, strategic leaps (e.g., moving the entire local data synchronization or rendering engine into WASM).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `wasm-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `COMP-01` for Compute, `MEM-01` for Memory/Bridge, `BLD-01` for Build/Payload).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific UI stutter, CPU spike, or large memory overhead does this address?
+         - **Proposed Solution:** Concrete WASM module implementation, memory passing strategy, or toolchain configuration.
+         - **Expected Impact:** Measurable reduction in execution time (ms), memory footprint, or .wasm file size (KB).
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to port this specific JS function to Zig/Rust, or optimize the memory bridge.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., absolutely forbidding the passing of large JSON strings across the JS-WASM bridge in favor of flat byte arrays/pointers, mandating explicit memory deallocation [e.g., allocator.free in Zig], and enforcing that all WASM instantiations happen asynchronously).
+      6. Conclude `wasm-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly unlock native-level performance.
+
+  # ---
+  # Name: ID156 - Legacy Code Rescue & Technical Debt Refactoring Audit
+  # Tags: Refactoring, Legacy Code, Technical Debt, Strangler Fig, Dead Code Elimination, Decoupling, Modularization, Prioritization
+  # Use cases: Technical debt eradication, legacy codebase rescue, God-file decomposition, incremental architecture migration, dead code cleanup
+  # Description: Acts as a Principal Software Architect and Legacy Code Rescue Expert to untangle spaghetti code and eradicate tech debt across 3 lenses (50% incremental migration & decoupling, 30% dead code elimination & dependency modernization, 20% AI DevEx & typing guardrails), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysrefactor"
+    replace: |
+      Act as a Principal Software Architect and Legacy Code Rescue Expert. Review this codebase and its legacy technical debt.
+
+      Brainstorm a high-leverage set of legacy code refactoring and technical debt eradication improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic, low-risk initiatives that untangle spaghetti code, eliminate dead weight, and modernize the architecture incrementally without resorting to a dangerous 'rewrite from scratch' mentality. This will make the codebase small, modular, and safe enough for AI coding agents to iterate on.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Incremental Migration & Decoupling (Implementing the 'Strangler Fig' pattern to slowly replace legacy systems, establishing Anti-Corruption Layers to protect new code from old data models, and breaking apart massive 1,000+ line 'God files' into Single Responsibility modules).
+      - Secondary focus (~30%): Dead Code Elimination (DCE) & Dependency Modernization (Aggressively pruning unused files, deprecated NPM/pip packages, and unreachable functions. Removing circular dependencies and replacing unmaintained 3rd-party libraries with modern, lightweight equivalents or native APIs).
+      - Tertiary focus (~20%): AI DevEx, Typing & Guardrails (Replacing any types with strict interfaces, writing 'characterization tests' to lock in the existing behavior of legacy functions before touching them, and extracting side-effects to create pure, easily AI-testable functions).
+
+      Include both immediate high-impact quick wins (e.g., automated dead code removal, isolating a single messy utility file) and bold, strategic leaps (e.g., strangling a core legacy module and routing traffic to a modern micro-app or edge function).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `refactor-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `DECOUP-01` for Decoupling, `DCE-01` for Dead Code, `MIG-01` for Migration/Strangler, `SAFE-01` for Guardrails).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific spaghetti-code bottleneck, brittle file, or blocked feature does this address?
+         - **Proposed Solution:** Concrete refactoring pattern (e.g., Strangler Fig, Facade), decoupling strategy, or testing harness.
+         - **Expected Impact:** Measurable reduction in lines of code (LOC), elimination of circular dependency warnings, or increased developer velocity.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to extract this specific function, write a characterization test for it, or map out its dependencies.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., absolutely forbidding the addition of new features into designated 'legacy' files, mandating that every modified legacy function must have a strict TypeScript/Python type applied to its signature before modification, and enforcing the extraction of pure functions).
+      6. Conclude `refactor-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly reduce tech debt pain.
+
+  # ---
+  # Name: ID157 - Browser Extension & Manifest V3 (MV3) Architecture Audit
+  # Tags: Browser Extension, Chrome Extension, Manifest V3, MV3, Service Worker, Message Passing, Web Store Compliance, Permissions, Prioritization
+  # Use cases: Chrome extension architecture audit, Manifest V3 migration, background service worker lifecycle management, message bus refactoring, Web Store review readiness
+  # Description: Acts as a Principal Browser Extension Architect and Manifest V3 Expert to audit extensions across 3 lenses (50% MV3 & ephemeral background workers, 30% message passing & DOM injection, 20% security, permissions & store compliance), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysextension"
+    replace: |
+      Act as a Principal Browser Extension Architect and Manifest V3 (MV3) Expert. Review this codebase and its browser extension architecture.
+
+      Brainstorm a high-leverage set of browser extension architecture, Manifest V3 compliance, and performance improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eradicate memory leaks, establish flawless cross-script communication, ensure immediate Chrome Web Store approval, and structure the codebase so AI coding agents rely strictly on modern MV3 APIs.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Manifest V3 & Ephemeral Background Workers (Adapting to the ephemeral nature of MV3 Service Workers [which terminate after 30 seconds of inactivity], replacing persistent background state with chrome.storage.session or local, and migrating any legacy chrome.webRequest blocking logic to declarativeNetRequest).
+      - Secondary focus (~30%): Message Passing & DOM Injection (Establishing a strongly-typed, centralized message-passing bus between content scripts, the background worker, and the popup. Optimizing content script DOM manipulation using MutationObserver without tanking the host page's performance).
+      - Tertiary focus (~20%): Security, Permissions & Store Compliance (Aggressively scoping permissions to the bare minimum host_permissions, enforcing strict Content Security Policies (CSP), completely avoiding eval() or inline scripts, and handling cross-origin (CORS) fetch requests securely from the background).
+
+      Include both immediate high-impact quick wins (e.g., stripping broad <all_urls> permissions to prevent manual store reviews) and bold, strategic leaps (e.g., migrating a messy Vanilla JS message passing system into a strict, Zod-validated TypeScript message bus).
+
+      Requirements:
+      1. Output the entire brainstorm directly into an `extension-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `MV3-01` for Background/Manifest, `MSG-01` for Communication, `DOM-01` for Content Scripts, `SEC-01` for Permissions/Security).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific MV3 lifecycle bug, host-page performance lag, or security rejection risk does this address?
+         - **Proposed Solution:** Concrete API refactor, message bus implementation, or manifest configuration change.
+         - **Expected Impact:** Prevention of service worker suspension bugs, faster host-page load times, or guaranteed Chrome Web Store approval.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to refactor this specific message listener, DOM observer, or manifest permission.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., absolutely forbidding the use of Manifest V2 APIs like chrome.extension.getBackgroundPage(), mandating that all background worker state be restored from chrome.storage on every wake-up, and enforcing strict type-checking on all chrome.runtime.sendMessage payloads).
+      6. Conclude `extension-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly bulletproof your extension.
+
+  # ---
+  # Name: ID158 - FastAPI, Pydantic & Async Python Architecture Audit
+  # Tags: FastAPI, Pydantic, Python, Async, SQLAlchemy, APIRouter, Dependency Injection, Ruff, Prioritization
+  # Use cases: FastAPI backend architecture audit, Pydantic V2 migration, async database optimization, ASGI event loop unblocking, dependency injection refactoring
+  # Description: Acts as a Principal Python Architect and FastAPI/Pydantic Expert to optimize backend services across 3 lenses (50% Pydantic V2 & FastAPI modularity, 30% async architecture & database performance, 20% Python toolchain & DevEx), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysfastapi"
+    replace: |
+      Act as a Principal Python Architect and FastAPI/Pydantic Expert. Review this codebase and its Python/FastAPI backend architecture.
+
+      Brainstorm a high-leverage set of Python, FastAPI, Pydantic, and Async architecture improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eradicate event-loop blocking, enforce strict type safety from the database to the API, heavily utilize FastAPI's Dependency Injection system, and structure the codebase so AI agents can reliably generate new endpoints and typed clients without hallucinating.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Pydantic V2 & FastAPI Modularity (Leveraging Pydantic V2 features for deep validation and fast serialization, utilizing FastAPI's Depends() for clean Dependency Injection [e.g., database sessions, auth checks], separating routes via APIRouter, and ensuring crystal-clear OpenAPI/Swagger specs for AI-agent consumption).
+      - Secondary focus (~30%): Async Architecture & Database Performance (Migrating to fully async ORM operations [e.g., SQLAlchemy 2.0 with asyncpg or aiosqlite], preventing synchronous CPU-bound blocking of the ASGI event loop, and properly pushing heavy processing to background tasks [e.g., Celery, ARQ, or FastAPI BackgroundTasks]).
+      - Tertiary focus (~20%): Python Toolchain, Guardrails & DevEx (Replacing legacy linting with Ruff, enforcing strict typing with Pyright/mypy, centralizing configuration via Pydantic BaseSettings, and implementing structured JSON logging [e.g., structlog] for observability).
+
+      Include both immediate high-impact quick wins (e.g., replacing a synchronous requests.get with httpx.AsyncClient) and bold, strategic leaps (e.g., decoupling a monolithic main.py into a domain-driven router architecture).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `fastapi-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `FAST-01` for FastAPI/Routing, `PYD-01` for Pydantic/Validation, `ASYNC-01` for Event Loop/DB, `TOOL-01` for Toolchain).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific blocking I/O bottleneck, type-safety leak, or messy route architecture does this address?
+         - **Proposed Solution:** Concrete FastAPI dependency implementation, Pydantic V2 migration, or async refactor.
+         - **Expected Impact:** Measurable improvement in requests-per-second, reduction in 500 errors, or faster AI onboarding.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to extract this specific router, refactor to SQLAlchemy 2.0, or implement this Pydantic validator.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., absolutely forbidding synchronous I/O [like time.sleep or requests] in route handlers, mandating that all endpoint inputs/outputs must be strictly typed Pydantic models, and enforcing the use of Annotated for FastAPI dependencies).
+      6. Conclude `fastapi-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly optimize your Python backend.
+
+  # ---
+  # Name: ID159 - Monorepo (Turborepo/Nx) & Workspace Architecture Audit
+  # Tags: Monorepo, Turborepo, Nx, pnpm Workspaces, Shared Packages, CI/CD Caching, Build Optimization, Prioritization
+  # Use cases: Monorepo architecture audit, shared package extraction, Turborepo/Nx pipeline optimization, dependency boundary enforcement, CI build speedup
+  # Description: Acts as a Principal Platform Architect and Monorepo Expert to streamline workspaces across 3 lenses (50% workspace architecture & boundary enforcement, 30% shared UI, types & core logic, 20% build optimization & CI/CD caching), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysmonorepo"
+    replace: |
+      Act as a Principal Platform Architect and Monorepo (Turborepo/Nx) Expert. Review this codebase and its monorepo workspace architecture.
+
+      Brainstorm a high-leverage set of monorepo architecture, shared packaging, and build pipeline improvements anchored in the 80/20 Pareto principle. The goal is to propose strategic initiatives that eradicate duplicate code, enforce strict dependency boundaries, slash build times via caching, and structure the workspace so AI coding agents can work inside isolated packages without needing the entire repository in their context window.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Workspace Architecture & Boundary Enforcement (Isolating frontend apps [e.g., web, mobile] from shared libraries. Eradicating 'phantom dependencies' by enforcing strict pnpm workspaces rules, and defining explicit dependency graphs so packages never import directly from sibling app folders).
+      - Secondary focus (~30%): Shared UI, Types & Core Logic (Extracting a headless UI component library, centralizing TypeScript configurations tsconfig.base.json, sharing Zod validation schemas, and creating unified ESLint/Prettier configuration packages).
+      - Tertiary focus (~20%): Build Optimization & CI/CD Pipelines (Maximizing Turborepo/Nx remote caching, parallelizing lint/test/build tasks, optimizing Dockerfile builds using turbo prune, and ensuring CI only builds packages that actually changed).
+
+      Include both immediate high-impact quick wins (e.g., centralizing ESLint configs into a @workspace/eslint-config package) and bold, strategic leaps (e.g., extracting all database/ORM logic into a standalone @workspace/db package shared by multiple backend services).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `monorepo-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `MONO-01` for Architecture, `PKG-01` for Shared Packages, `CACHE-01` for Build/CI).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific duplicated code, slow CI build, or messy dependency web does this address?
+         - **Proposed Solution:** Concrete package extraction, Turborepo pipeline configuration, or workspace rule.
+         - **Expected Impact:** Measurable reduction in CI build times (minutes), lines of duplicated code, or AI token usage (due to smaller context boundaries).
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to extract this specific package, configure turbo.json, or scaffold a shared UI library.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., absolutely forbidding relative imports between apps [e.g., ../../apps/web], mandating the use of workspace aliases like @workspace/ui, and enforcing that all shared dependencies [React, Tailwind] are perfectly version-aligned across the repository).
+      6. Conclude `monorepo-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly clean up your workspace.
+
+  # ---
+  # Name: ID160 - Feature-Sliced Design (FSD) & Domain-Driven Modularization Audit
+  # Tags: Feature-Sliced Design, FSD, Domain-Driven Design, DDD, Modularization, Architecture, Context Window, Token Optimization, Prioritization
+  # Use cases: Feature-Sliced Design migration, domain boundary enforcement, context window token optimization for AI agents, public barrel API design, God-file decomposition
+  # Description: Acts as a Principal AI-Native Architecture Expert and Domain-Driven Design Specialist to restructure codebases across 3 lenses (50% feature/domain isolation, 30% token optimization & context window defenses, 20% public APIs & anti-corruption layers), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysfsd"
+    replace: |
+      Act as a Principal AI-Native Architecture Expert and Domain-Driven Design Specialist. Review this codebase and its architectural folder structure.
+
+      Brainstorm a high-leverage set of architectural improvements anchored in Feature-Sliced Design (FSD) and Domain-Driven Design (DDD). The goal is to eradicate flat, role-based folder structures and reorganize the codebase into strictly isolated, domain-specific modules. This ensures that AI coding agents (like Cursor or Claude) can load an entire feature into their context window with minimal token waste, zero cross-domain hallucinations, and no need to ingest massive global utility files.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Feature/Domain Isolation (Grouping UI components, state, hooks, and API calls by business domain [e.g., features/auth, features/inventory] rather than technical role [e.g., components, hooks]. Establishing strict import boundaries so features cannot import internal logic from sibling features).
+      - Secondary focus (~30%): Token Optimization & Context Window Defenses (Breaking down massive 'God files', decoupling global state into localized feature state, and structuring files so AI agents can comprehensively understand a feature slice using <10k tokens).
+      - Tertiary focus (~20%): Public APIs & Anti-Corruption Layers (Defining strict index.ts barrel files for each feature that act as the only public API for that module, hiding internal implementation details from the AI when it is generating code in other areas of the app).
+
+      Include both immediate high-impact quick wins (e.g., extracting a single isolated feature out of the global components/ folder) and bold, strategic leaps (e.g., implementing a strict ESLint boundary rule that physically prevents cross-feature imports).
+
+      Requirements:
+      1. Output the entire brainstorm directly into an `fsd-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `FSD-01` for Feature Boundaries, `TOK-01` for Token Optimization, `API-01` for Public Interfaces).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific token-wasting file, spaghetti import, or AI hallucination trigger does this address?
+         - **Proposed Solution:** Concrete folder restructure, barrel file implementation, or state decoupling.
+         - **Expected Impact:** Measurable reduction in context window token usage, prevention of circular dependencies, or faster AI code generation.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to extract this specific feature, generate this barrel file, or enforce this import boundary.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., absolutely forbidding relative imports that reach up and into another feature's internal folders [e.g., ../../features/auth/components/LoginForm], mandating the use of feature-level index.ts files, and enforcing that all business logic stays co-located with its UI).
+      6. Conclude `fsd-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly optimize the codebase for AI agents.
+
+  # ---
+  # Name: ID161 - AI-Native TDD & Self-Correction Testing Harness Audit
+  # Tags: Testing, TDD, AI Agents, Self-Correction, Characterization Tests, Vitest, Pytest, Playwright, Prioritization
+  # Use cases: AI-native test suite architecture, agentic self-healing test harness, characterization test generation, pure function refactoring, CI test guardrails
+  # Description: Acts as a Principal QA Architect and AI-Driven TDD Expert to build self-healing test harnesses across 3 lenses (50% agentic self-correction & characterization tests, 30% pure functions & dependency injection, 20% guardrails, CI integration & E2E), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysaitest"
+    replace: |
+      Act as a Principal QA Architect and AI-Driven TDD (Test-Driven Development) Expert. Review this codebase and its testing architecture.
+
+      Brainstorm a high-leverage set of testing architecture improvements anchored in the 80/20 Pareto principle. The goal is to build an AI-native testing harness—structuring unit, integration, and E2E tests so that an AI coding agent can write code, automatically run the test suite, read the exact error outputs, and self-correct its own hallucinations without human intervention.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Agentic Self-Correction & Characterization Tests (Structuring tests to output highly descriptive, deterministic failure messages that tell the AI exactly what logic it broke. Implementing 'Characterization Tests' to lock in legacy or undocumented behavior before asking an AI to refactor it).
+      - Secondary focus (~30%): Pure Functions & Dependency Injection (Refactoring business logic to separate side-effects [e.g., database writes, network calls, time] from pure data transformations. This makes it trivially easy for an AI to write isolated unit tests without hallucinating complex mock setups).
+      - Tertiary focus (~20%): Guardrails, CI Integration & E2E (Setting up headless browser tests [Playwright/Cypress] to catch UI regressions caused by AI styling changes, and wiring local git hooks so the AI gets immediate feedback before a commit is even allowed).
+
+      Include both immediate high-impact quick wins (e.g., rewriting a vague test assertion to output a machine-readable failure string) and bold, strategic leaps (e.g., decoupling a massive UI component into a pure data-transformation function and a dumb view layer).
+
+      Requirements:
+      1. Output the entire brainstorm directly into an `aitest-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `TDD-01` for Agentic Tests, `PURE-01` for Function Architecture, `E2E-01` for Guardrails).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific brittle test, AI hallucination loop, or untestable side-effect does this address?
+         - **Proposed Solution:** Concrete test refactor, dependency injection pattern, or CI hook setup.
+         - **Expected Impact:** Measurable reduction in AI debugging loops, prevention of regressions, or faster local test execution.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to generate this exact characterization test, refactor the function to be pure, or mock a specific dependency.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., absolutely forbidding the use of any in test mocks, mandating that the AI must write a failing test before altering business logic [TDD], and enforcing that all network calls in tests are intercepted or structurally mocked).
+      6. Conclude `aitest-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly make the codebase self-healing.
+
+  # ---
+  # Name: ID162 - Embedded Machine-Readable Context & DevEx Architecture Audit
+  # Tags: DevEx, Agentic Context, Cursor Rules, ADRs, Machine-Readable Docs, TSDoc, Self-Documenting, Prioritization
+  # Use cases: AI coding agent context optimization, localized .cursorrules architecture, Architecture Decision Records (ADRs) scaffolding, hallucination reduction, DevEx documentation
+  # Description: Acts as a Principal Developer Experience (DevEx) Architect and LLM Context Engineer to eliminate AI amnesia across 3 lenses (50% localized rules & agentic context, 30% Architecture Decision Records [ADRs], 20% self-documenting code & type schemas), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsyscontext"
+    replace: |
+      Act as a Principal Developer Experience (DevEx) Architect and LLM Context Engineer. Review this codebase and its developer/agentic documentation posture.
+
+      Brainstorm a high-leverage set of embedded documentation and machine-readable context improvements anchored in the 80/20 Pareto principle. The goal is to eradicate AI 'amnesia' and code hallucinations by scaffolding the repository with embedded Architecture Decision Records (ADRs), strict localized .cursorrules, and self-documenting type schemas. The repo must act as a 'second brain' that instantly onboards an AI coding agent (like Cursor or Claude) to your exact business rules, constraints, and tech stack choices without requiring human intervention.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Localized Rules & Agentic Context (Moving away from one massive global .cursorrules file to highly specific, localized rule files [e.g., placing a .cursorrules inside the /database folder that explicitly dictates SQL standards or ORM boundaries]. Formatting these instructions optimally for LLM parsing).
+      - Secondary focus (~30%): Architectural Decision Records [ADRs] (Documenting why certain technologies were chosen [e.g., 'Why we use Local-First SQLite instead of Postgres'] in a lightweight Markdown format, ensuring the AI stops suggesting alternative architectures and strictly stays within your constraints).
+      - Tertiary focus (~20%): Self-Documenting Code & Type Schemas (Leveraging rich JSDoc/TSDoc comments, Zod schemas with .describe(), and explicit variable naming so the AI can infer business logic directly from the autocomplete/type server rather than guessing).
+
+      Include both immediate high-impact quick wins (e.g., creating an ADR-001-Tech-Stack.md file to stop the AI from hallucinating React when you use Vue) and bold, strategic leaps (e.g., writing a script that automatically generates context files based on folder structure).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `context-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `CTX-01` for Localized Rules, `ADR-01` for Architecture Records, `DOC-01` for Self-Documenting Types).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific AI hallucination, forgotten context, or tech-stack violation does this address?
+         - **Proposed Solution:** Concrete .cursorrules implementation, ADR template, or JSDoc refactor.
+         - **Expected Impact:** Measurable reduction in AI misdirections, faster agent onboarding, or higher zero-shot code generation accuracy.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to generate this specific ADR, write this localized rule file, or enrich this type schema.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI code generation (e.g., absolutely forbidding the AI from altering core architectural patterns without first referencing the docs/adr/ folder, mandating that all exported interfaces include a TSDoc comment explaining their business purpose, and enforcing that the AI reads localized rules before touching a domain).
+      6. Conclude `context-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly bulletproof your agentic context.
