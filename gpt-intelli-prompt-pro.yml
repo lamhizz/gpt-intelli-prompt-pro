@@ -2571,3 +2571,89 @@ matches:
            * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
            * Bottom-Right: Low Impact / High Effort (Deprioritize)
          - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly bulletproof your agentic context.
+
+  # ---
+  # Name: ID163 - User Journey Continuity & UX Flow Interconnectivity Audit
+  # Tags: UX Architecture, User Journey, User Flows, Interconnectivity, Cognitive Friction, FTUE, Empty States, Prioritization
+  # Use cases: User journey continuity audit, dead-end elimination, cognitive friction reduction, multi-step flow optimization, onboarding & empty state design
+  # Description: Acts as a Principal UX Architect and User Journey Specialist to audit user journeys across 3 lenses (50% journey continuity & interconnectivity, 30% cognitive friction & decision fatigue, 20% edge cases, empty states & FTUE), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - triggers:
+      - ":gsysuxflows"
+      - ":gsysjourneys"
+    replace: |
+      Act as a Principal UX Architect and User Journey Specialist. Review this codebase and its user-facing journey flows.
+
+      Brainstorm a high-leverage set of UX, user flow, and interconnectivity improvements anchored in the 80/20 Pareto principle. The goal is to aggressively audit the app from a strictly user-centric perspective—hunting for cognitive friction, dead ends, orphaned screens, and broken or non-obvious scenarios. You must propose strategic initiatives that weave isolated features into a seamless, intuitive journey where the user always knows exactly what to do next.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Journey Continuity & Interconnectivity (Eradicating 'dead ends' such as success screens with no next steps. Bridging isolated features so they flow naturally into one another, ensuring persistent navigational context, and fixing 'orphaned' screens that are hard to return from).
+      - Secondary focus (~30%): Cognitive Friction & Decision Fatigue (Reducing the 'clicks-to-value' metric. Clarifying ambiguous primary calls-to-action [CTAs], simplifying multi-step wizards or complex forms, and preventing the user from having to memorize information across different screens).
+      - Tertiary focus (~20%): Edge Cases, Empty States & FTUE (Designing the First-Time User Experience [FTUE] so 'blank slates' act as tutorials rather than empty voids. Mapping out intuitive recovery flows for when a user denies a permission, cancels an action, or encounters an edge case).
+
+      Include both immediate high-impact quick wins (e.g., adding a 'Back to Dashboard' button on a dead-end success modal) and bold, strategic leaps (e.g., completely redesigning a fragmented 5-step setup process into a single contextual screen).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `uxflows-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `FLOW-01` for Interconnectivity, `COG-01` for Cognitive Friction, `EDGE-01` for Empty States/Recovery).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific dead end, confusing transition, or blank slate does this address?
+         - **Proposed Solution:** Concrete UI navigation change, flow restructuring, or contextual prompt.
+         - **Expected Impact:** Measurable reduction in drop-off rates, faster task completion time, or improved user retention.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to refactor this specific user flow, implement this empty state, or bridge these two screens.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI UI generation (e.g., absolutely forbidding 'dead end' screens that lack a primary next action, mandating that every list component must have a designed EmptyState fallback, and enforcing visual hierarchy where there is only ever one primary CTA per screen).
+      6. Conclude `uxflows-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly smooth out the user journey.
+
+  # ---
+  # Name: ID164 - Product Onboarding, FTUE & Contextual Wizard Optimization
+  # Tags: Onboarding, FTUE, Growth Architecture, Activation Rate, Aha Moment, Contextual Guidance, Empty States, Prioritization
+  # Use cases: Product onboarding audit, FTUE overhaul, contextual wizard implementation, Aha moment pipeline mapping, empty state activation
+  # Description: Acts as a Principal Product Growth Architect and First-Time User Experience (FTUE) Specialist to map critical user paths and design contextual onboarding across 3 lenses (50% Aha! pipeline & contextual wizards, 30% progressive disclosure & setup friction, 20% empty states & habit building), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - triggers:
+      - ":gsysonboarding"
+      - ":gsysftue"
+    replace: |
+      Act as a Principal Product Growth Architect and First-Time User Experience (FTUE) Specialist. Review this codebase and its user onboarding experience.
+
+      Your task is a two-step process. First, deconstruct the application to identify its core critical path—the exact sequence of steps a user must take to achieve 'Setup', experience the 'Aha! Moment' (value realization), and enter the 'Habit Loop' (recurring usage). Second, brainstorm a high-leverage set of onboarding and wizard improvements anchored in the 80/20 Pareto principle to guarantee users successfully complete that path.
+
+      When proposing UI solutions, prioritize contextual, in-app guidance (e.g., UI spotlight overlays, dismissible contextual tooltips, and progressive disclosure) rather than massive, skip-heavy upfront tutorials.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): The Aha! Pipeline & Contextual Wizards (Mapping the shortest path to value. Implementing just-in-time onboarding UI, such as spotlighting specific bottom-bar icons, using playful instructional overlays with clear 'Tap to continue' actions, and guiding the user step-by-step through their very first core action).
+      - Secondary focus (~30%): Progressive Disclosure & Setup Friction (Eliminating massive upfront data-entry walls. Delaying non-essential permissions [e.g., Push Notifications] or settings until the user actually needs them. Utilizing 'Endowed Progress' to make setup feel fast and rewarding).
+      - Tertiary focus (~20%): Empty States & Habit Building (Designing dashboard 'blank slates' as interactive calls-to-action rather than dead ends. Implementing subtle gamification or success confetti to celebrate the completion of the onboarding wizard and establish the habit loop).
+
+      Include both immediate high-impact quick wins (e.g., replacing a static empty screen with a pointing arrow and a 'Create your first X' button) and bold, strategic leaps (e.g., building a global onboarding state machine that tracks user milestones across sessions).
+
+      Requirements:
+      1. Output the entire brainstorm directly into an `onboarding-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `CORE-01` for Path Mapping, `WIZ-01` for Onboarding UI/Overlays, `HABIT-01` for Empty States/Retention).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific onboarding drop-off, overwhelming UI, or missing 'Aha!' moment does this address?
+         - **Proposed Solution:** Concrete contextual overlay design, wizard step, or flow restructuring.
+         - **Expected Impact:** Measurable increase in activation rate (Day 1 retention), faster time-to-value, or reduction in early churn.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to generate this specific tooltip component, onboarding state machine, or empty-state illustration logic.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI UI generation (e.g., absolutely forbidding the creation of 'next/skip' carousel tutorials in favor of contextual UI spotlights, mandating that all new features must include an isFirstVisit check for guided tooltips, and enforcing that empty states always contain a primary CTA).
+      6. Conclude `onboarding-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly improve your activation rate.
