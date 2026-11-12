@@ -2657,3 +2657,85 @@ matches:
            * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
            * Bottom-Right: Low Impact / High Effort (Deprioritize)
          - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly improve your activation rate.
+
+  # ---
+  # Name: ID165 - Motion Architecture & Spatial UI Micro-Interactions Audit
+  # Tags: Motion Design, Spatial UI, Micro-Interactions, Spring Physics, Framer Motion, Reanimated, Haptics, 60fps, Prioritization
+  # Use cases: Motion design audit, physics-based spring tuning, spatial layout transitions, sensory haptic synchronization, UI jank elimination
+  # Description: Acts as a Principal Motion Architect and Spatial UI Expert to elevate UI fluidity across 3 lenses (50% physics-based motion & micro-interactions, 30% spatial continuity & layout transitions, 20% sensory synergy & GPU performance), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - trigger: ":gsysmotion"
+    replace: |
+      Act as a Principal Motion Architect and Spatial UI Expert. Review this codebase and its motion/interaction layer.
+
+      Brainstorm a high-leverage set of motion architecture, spatial micro-interaction, and sensory improvements anchored in the 80/20 Pareto principle. The goal is to aggressively audit the app for stiff, linear, or janky transitions and propose strategic initiatives that elevate the UX from merely 'functional' to visceral, fluid, and sensual. The interface must feel like a physical, organic object with weight and momentum.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Physics-Based Motion & Micro-Interactions (Eradicating linear CSS easings in favor of physics-based spring animations [mass, stiffness, damping]. Adding playful, organic micro-interactions to buttons, radial menus, and interactive shapes to make them feel highly responsive to touch).
+      - Secondary focus (~30%): Spatial Continuity & Layout Transitions (Implementing shared element transitions and fluid layout animations so UI elements gracefully morph between views rather than abruptly flashing in and out. Maintaining a clear Z-axis hierarchy so the user always understands spatial context).
+      - Tertiary focus (~20%): Sensory Synergy & GPU Performance (Perfectly synchronizing visual motion with device haptics [e.g., triggering a subtle vibration precisely when a digital object snaps into place]. Ensuring all animations use transform and opacity to remain hardware-accelerated, preventing layout thrashing and dropped frames).
+
+      Include both immediate high-impact quick wins (e.g., replacing a static hover state with a subtle, spring-based scale effect) and bold, strategic leaps (e.g., wiring an overarching gesture-driven state machine that ties swipe momentum directly to screen transitions).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `motion-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `MOT-01` for Physics/Springs, `SPAT-01` for Spatial Layout, `SENS-01` for Haptics/Performance).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific stiff animation, jarring screen cut, or dropped frame does this address?
+         - **Proposed Solution:** Concrete spring configuration, layout animation wrapper, or haptic synchronization.
+         - **Expected Impact:** Measurable increase in perceived performance, reduction in UI jank, and a deeply tactile, emotional user connection.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to generate this specific spring config, wrap this component in a shared layout transition, or bind this interaction to native haptics.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI UI generation (e.g., absolutely forbidding the use of transition: all or linear easings, mandating that any interactive element must have a tactile active/pressed state, and enforcing that all animations only animate composite properties to guarantee 60/120fps performance).
+      6. Conclude `motion-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly breathe life into the UI.
+
+  # ---
+  # Name: ID166 - WebGL, 3D Graphics & Creative Shader Optimization
+  # Tags: WebGL, Three.js, Shaders, GLSL, R3F, Creative Coding, 3D Graphics, GPU Optimization, Prioritization
+  # Use cases: WebGL performance audit, custom GLSL shader implementation, 3D memory leak cleanup, draw call optimization, canvas-to-DOM integration
+  # Description: Acts as a Principal Graphics Programmer and WebGL/Creative Coding Expert to audit canvas environments across 3 lenses (50% visual fidelity & custom shaders, 30% GPU performance & memory management, 20% interactivity & canvas-to-DOM bridging), ending with .cursorrules and an ASCII 2x2 prioritization matrix.
+  - triggers:
+      - ":gsyswebgl"
+      - ":gsysfx"
+    replace: |
+      Act as a Principal Graphics Programmer and WebGL/Creative Coding Expert. Review this codebase and its 2D/3D graphics rendering pipeline.
+
+      Brainstorm a high-leverage set of 2D/3D rendering, visual polish, and special effects improvements anchored in the 80/20 Pareto principle. The goal is to audit the canvas environment to elevate visual fidelity (e.g., realistic glass refractions, fluid curl noise, organic particle systems) while aggressively optimizing draw calls, memory management, and GPU performance so AI coding agents can generate stunning effects that remain highly performant.
+
+      Core Lens Distribution:
+      - Primary focus (~50%): Visual Fidelity & Custom Shaders (Elevating materials from basic physically based rendering (PBR) to custom shader materials. Implementing highly polished effects like subsurface scattering, realistic glass/water refractions, carved depth effects, curl noise fluid dynamics, and post-processing passes like Unreal bloom or depth-of-field).
+      - Secondary focus (~30%): GPU Performance & Memory Management (Slashing draw calls using InstancedMesh or texture atlasing. Enforcing strict WebGL garbage collection by aggressively disposing of geometries, materials, and textures to prevent silent memory leaks and browser tab crashes).
+      - Tertiary focus (~20%): Interactivity & Canvas-to-DOM Bridging (Optimizing raycasting for interactive 3D objects, synchronizing external sensor data [e.g., MediaPipe hand tracking, gyroscope] with camera controls, and cleanly bridging React/HTML UI state with the WebGL render loop without causing render thrashing).
+
+      Include both immediate high-impact quick wins (e.g., swapping multiple identical geometries for a single instanced mesh) and bold, strategic leaps (e.g., replacing a CPU-bound particle system with a GPU compute shader).
+
+      Requirements:
+      1. Output the entire brainstorm directly into a `webgl-ideas-backlog.md` file using clean Markdown.
+      2. Group ideas by overarching theme.
+      3. Assign each idea a unique ID prefixed by its theme (e.g., `VFX-01` for Shaders/Visuals, `PERF-01` for GPU/Memory, `IX-01` for Interactivity).
+      4. Format each idea concisely:
+         - **[ID] Title**
+         - **In Simple Terms:** A one-sentence, plain-English explanation of what this change is and why it matters (perfect for non-technical stakeholders).
+         - **Problem / Opportunity:** What specific visual flatness, dropped frame rate, or memory leak does this address?
+         - **Proposed Solution:** Concrete GLSL shader implementation, post-processing pass, or WebGL optimization technique.
+         - **Expected Impact:** Measurable increase in frame rate (FPS), reduced GPU memory footprint (MB), or a distinctly visceral visual upgrade.
+         - **Actionable AI Prompt:** A 1-sentence prompt I can paste directly into Cursor, Copilot, or Claude to write this specific fragment shader, implement this bloom pass, or refactor this mesh into an InstancedMesh.
+         - **Impact / Effort:** (e.g., High Impact / Low Effort).
+      5. Add a `.cursorrules` / AI Agent System Instructions section: Write 3-5 strict project rules tailored to this codebase to guide future AI WebGL generation (e.g., absolutely forbidding the instantiation of new THREE.Vector3() or new geometries inside the requestAnimationFrame render loop, mandating that every destroyed 3D object explicitly calls .dispose() on its materials and geometries, and enforcing precision limits in GLSL shaders to support mobile GPUs).
+      6. Conclude `webgl-ideas-backlog.md` with a "Pareto 80/20 Prioritization Matrix":
+         - Render a visual ASCII 2x2 quadrant graph inside a code block (`HIGH IMPACT` on the vertical Y-axis vs. `LOW EFFORT (Quick Wins)` to `HIGH EFFORT (Strategic Bets)` on the horizontal X-axis).
+         - Plot every generated idea ID into its corresponding quadrant:
+           * Top-Left: High Impact / Low Effort (80/20 Quick Wins)
+           * Top-Right: High Impact / High Effort (Strategic Bets)
+           * Bottom-Left: Low Impact / Low Effort (Low-Hanging Fruit)
+           * Bottom-Right: Low Impact / High Effort (Deprioritize)
+         - Explicitly highlight the top 3 standout 80/20 quick wins to execute first to instantly elevate your graphics engine.
